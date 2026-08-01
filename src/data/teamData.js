@@ -361,6 +361,16 @@ const teamData = {
         github: "https://github.com/Alvin0523",  
 
       },
+      {
+        name: "WANG Zhizhong",
+        role: "Software Member",
+        image: "/website_member_photos/zhizhong-1.jpg",
+        backImage: "/website_member_photos/zhizhong-2.jpg",
+        schoolYear: "Year 2 Robotics Engineering Student",
+        linkedin: "https://www.linkedin.com/in/wongweiming/",
+        github: "https://github.com/Alvin0523",  
+
+      },
       ], 
       electrical : [
         {
