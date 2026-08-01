@@ -1,0 +1,478 @@
+const teamData = {
+  'AY24/25': {
+    Members: [
+      {
+        name: "LUO Zhiyu",
+        role: "Executive Lead",
+        image: "/website_member_photos/zhiyu-1.jpg",
+        backImage: "/website_member_photos/zhiyu-2.jpg",
+        schoolYear: "Year 2 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
+        github: "https://github.com/lucvt001",
+      },
+      {
+        name: "GAO Zhifu",
+        role: "Software Lead",
+        image: "/website_member_photos/zhifu-1.jpg",
+        backImage: "/website_member_photos/zhifu-2.jpg",
+        schoolYear: "Year 4 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/toh-jia-hao-65bb39229/",
+        github: "https://github.com/Evintjh",
+      },
+      {
+        name: "WANG Xin",
+        role: "Hardware Lead",
+        image: "/website_member_photos/xin-1.jpg",
+        backImage: "/website_member_photos/xin-2.jpg",
+        schoolYear: "Year 2 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+
+      },
+      {
+        name: "YU Ruilin",
+        role: "Software Lead",
+        image: "/website_member_photos/ruilin-1.jpg",
+        backImage: "/website_member_photos/ruilin-2.jpg",
+        schoolYear: "Year 2 Biological Sciences Student",
+        linkedin: "https://linkedin.com/in/kevinzhang",
+        github: "https://github.com/jennifergoh",
+      },
+      {
+        name: "LU Xiaoyao",
+        role: "Software Member",
+        image: "/website_member_photos/xiaoyao-1.jpg",
+        backImage: "/website_member_photos/xiaoyao-2.jpg",
+        schoolYear: "Year 4 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/zach-low",
+
+      },
+
+      {
+        name: "YANG Bingzhuo",
+        role: "Hardware Member",
+        image: "/website_member_photos/bingzhuo-1.jpg",
+        backImage: "/website_member_photos/bingzhuo-2.jpg",
+        schoolYear: "Year 1 Mechanical Engineering Student",
+        linkedin: "https://linkedin.com/in/kevinzhang",
+        github: "https://github.com/rushdan",
+      },
+      {
+        name: "WANG Guocun",
+        role: "Software Lead",
+        image: "/website_member_photos/guocun-1.jpg",
+        backImage: "/website_member_photos/guocun-2.jpg",
+        schoolYear: "Year 1 Electrical and Electronic Engineering Student",
+        linkedin: "https://www.linkedin.com/in/cheo-le-xian-92305b287/",
+      },
+      {
+        name: "LI Guolin",
+        role: "Website Developer",
+        image: "/website_member_photos/guolin-1.jpeg",
+        backImage: "/website_member_photos/guolin-2.jpg",
+        schoolYear: "Year 2 Computer Engineering Student",
+        linkedin: "https://www.linkedin.com/in/abdillah-goh-9440b2198/",
+        github: "https://github.com/gohabdillah",
+      },
+      {
+        name: "CHEN Jiajun",
+        role: "Hardware Member",
+        image: "/website_member_photos/jiajun-1.jpg",
+        backImage: "/website_member_photos/jiajun-2.jpg",
+        schoolYear: "Year 2 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
+
+      },
+
+    ],
+
+  },
+  'AY25/26': {
+    leads: [
+      {
+        name: "JIANG Huaiyu",
+        role: "CEO, Team Lead",
+        image: "/website_member_photos/huaiyu-1.jpg",
+        backImage: "/website_member_photos/huaiyu-2.jpg",
+        schoolYear: "Year 3 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/zach-low",
+      },
+      {
+        name: "SUN Zhiyao",
+        role: "CTO",
+        image: "/website_member_photos/zhiyao-1.jpg",
+        backImage: "/website_member_photos/zhiyao-2.jpg",
+        schoolYear: "Year 3 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
+        github: "https://github.com/lucvt001",  
+      },
+      {
+        name: "ZHONG Ye",
+        role: "CFO",
+        image: "/website_member_photos/ye-1.jpg",
+        backImage: "/website_member_photos/ye-2.jpg",
+        schoolYear: "Year 3 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+      },
+      {
+        name: "GUO Yue",
+        role: "COO CHRO",
+        image: "/website_member_photos/yue-1.jpg",
+        backImage: "/website_member_photos/yue-2.jpg",
+        schoolYear: "Year 3 Biological Sciences Student",
+        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+      },
+      {
+        name: "YANG Zheyu",
+        role: "Software Lead",
+        image: "/website_member_photos/zheyu-2.jpg",
+        backImage: "/website_member_photos/zheyu-1.jpg",
+        schoolYear: "Year 4 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/eozk/",
+        github: "https://github.com/eozkzoe",  
+
+      },
+    ],
+    hardware: [
+      {
+        name: "JIANG Huaiyu",
+        role: "CEO, Team Lead",
+        image: "/website_member_photos/zac-1.jpg",
+        backImage: "/website_member_photos/zac-2.jpg",
+        schoolYear: "Year 4 Mechanical Student",
+        linkedin: "https://www.linkedin.com/in/zach-low/",
+      },
+      {
+        name: "HUANG Kangyi",
+        role: "CFO",
+        image: "/website_member_photos/arthur-1.jpg",
+        backImage: "/website_member_photos/arthur-2.jpg",
+        schoolYear: "Year 3 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+      },
+
+    ],
+    software: [
+      {
+        name: "SUN Zhiyao",
+        role: "Software Lead",
+        image: "/website_member_photos/ethanong-2.jpg",
+        backImage: "/website_member_photos/ethanong-1.JPG",
+        schoolYear: "Year 4 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/eozk/",
+      },
+      {
+        name: "ZHONG Ye",
+        role: "Software Member",
+        image: "/website_member_photos/luc-1.jpg",
+        backImage: "/website_member_photos/luc-2.jpg",
+        schoolYear: "Year 3 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
+        github: "https://github.com/lucvt001",
+      },
+      {
+        name: "WANG Yizhou",
+        role: "Software Advisor",
+        image: "/website_member_photos/jiahao-2.jpg",
+        backImage: "/website_member_photos/jiahao-1.jpg",
+        schoolYear: "Year 4 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/toh-jia-hao-65bb39229/",
+        github: "https://github.com/Evintjh",
+      },
+
+
+    ],
+    electrical: [
+      {
+        name: "YANG Zheyu",
+        role: "Electrical & Special Projects Lead",
+        image: "/website_member_photos/zheyu-1.jpg",
+        backImage: "/website_member_photos/zheyu-2.jpg",
+        schoolYear: "Year 2 Computer Science Student",
+        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        github: "https://github.com/scott-cjx",  
+      },
+    ],
+    business: [
+      {
+        name: "SHA Yuehan",
+        role: "COO CHRO",
+        image: "/website_member_photos/jen-1.jpg",
+        backImage: "/website_member_photos/jen-2.jpg",
+        schoolYear: "Year 3 Biological Sciences Student",
+        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+      },
+
+    ],
+    advisors: [
+      {
+        name: "XU Hongli",
+        role: "Team Advisor",
+        image: "/website_member_photos/hongli-1.jpg",
+        backImage: "/website_member_photos/hongli-2.jpg",
+        schoolYear: "Professor, Faculty of Robot Science and Engineering",
+        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+      },
+      {
+        name: "RU Jingyu",
+        role: "Team Advisor",
+        image: "/website_member_photos/jingyu-1.jpg",
+        backImage: "/website_member_photos/jingyu-2.jpg",
+        schoolYear: "Associate Professor, Faculty of Robot Science and Engineering",
+      },
+      {
+        name: "WANG Junyi",
+        role: "Team Advisor",
+        image: "/website_member_photos/junyi-1.jpg",
+        backImage: "/website_member_photos/junyi-2.jpg",
+        schoolYear: "Professor, Faculty of Robot Science and Engineering",
+        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+      },
+      {
+        name: "WANG Shuai",
+        role: "Team Advisor",
+        image: "/website_member_photos/shuai-1.jpg",
+        backImage: "/website_member_photos/shuai-2.jpg",
+        schoolYear: "Laboratory Technician, Faculty of Robot Science and Engineering",
+        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+      },
+    ]
+  },
+  'AY26/27': {
+      leads : [
+        {
+        name: "XU Yibo",
+        role: "Leader",
+        image: "/website_member_photos/yibo-1.jpg",
+        backImage: "/website_member_photos/yibo-2.jpg",
+        schoolYear: "Year 3 Robotics Engineering Student",
+        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+        github: "https://github.com/g-n-mkbk"
+      },
+      {
+        name: "WANG Yizhou",
+        role: "CEO",
+        image: "/website_member_photos/yizhou-1.jpg",
+        backImage: "/website_member_photos/yizhou-2.jpg",
+        schoolYear: "Year 3 Robotics Engineering Student",
+        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+        github: "https://github.com/HelloEaJoe"
+      },
+      {
+        name: "HUANG Kangyi",
+        role: "CTO",
+        image: "/website_member_photos/kangyi-1.jpg",
+        backImage: "/website_member_photos/kangyi-2.jpg",
+        schoolYear: "Year 3 Robotics Engineering Student",
+        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
+      },
+      {
+        name: "GUO Hongyuan",
+        role: "CEO",
+        image: "/website_member_photos/hongyuan-2.jpg",
+        backImage: "/website_member_photos/hongyuan-2.jpg",
+        schoolYear: "Year 3 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
+      },
+      {
+        name: "YAO Fangming",
+        role: "CTO",
+        image: "/website_member_photos/fangming-1.jpg",
+        backImage: "/website_member_photos/fangming-2.jpg",
+        schoolYear: "Year 3 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
+        github: "https://github.com/lucvt001",  
+      },
+      {
+        name: "HU Donghui",
+        role: "CRO, Electrical Lead",
+        image: "/website_member_photos/donghui-1.jpg",
+        backImage: "/website_member_photos/donghui-2.jpg",
+        schoolYear: "Year 3 Computer Science Student",
+        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        github: "https://github.com/scott-cjx",  
+      },
+      {
+        name: "ZHOU Kaiyang",
+        role: "CV Lead",
+        image: "/website_member_photos/kaiyang-1.jpg",
+        backImage: "/website_member_photos/kaiyang-2.jpg",
+        schoolYear: "Year 3 Artificial Intelligence Student",
+        linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
+      },
+      {
+        name: "WANG Chi",
+        role: "Mechanical Lead",
+        image: "/website_member_photos/chi-1.jpg",
+        backImage: "/website_member_photos/chi-2.jpg",
+        schoolYear: "Year 3 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
+      },
+      {
+        name: "LI Longxian",
+        role: "COO, CFO",
+        image: "/website_member_photos/longxian-1.jpg",
+        backImage: "/website_member_photos/longxian-2.jpg",
+        schoolYear: "Year 3 Artificial Intelligence Student",
+        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+      },
+      ],
+      mechanical : [
+        {
+        name: "HUANG Kangyi",
+        role: "Mechanical Lead",
+        image: "/website_member_photos/kangyi-1.jpg",
+        backImage: "/website_member_photos/kangyi-2.jpg",
+        schoolYear: "Year 3 Robotics Engineering Student",
+        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
+      },
+      {
+        name: "CAI Yuze",
+        role: "Mechanical Member",
+        image: "/website_member_photos/yuze-1.jpg",
+        backImage: "/website_member_photos/yuze-2.jpg",
+        schoolYear: "Year 4 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+      },
+      {
+        name: "CHEN Xiangtao",
+        role: "Mechanical Member",
+        image: "/website_member_photos/xiangtao-1.jpg",
+        backImage: "/website_member_photos/xiangtao-2.jpg",
+        schoolYear: "Year 4 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
+      },
+      {
+        name: "YUE Qihang",
+        role: "Mechanical Member",
+        image: "/website_member_photos/qihang-2.jpg",
+        backImage: "/website_member_photos/qihang-1.jpg",
+        schoolYear: "Year 3 Mechanical Engineering Student",
+        linkedin: "https://www.linkedin.com/in/fangzhou-liu-83887b28b/",
+        },
+      ],
+      software : [
+        {
+        name: "XU Yibo",
+        role: "Software Division",
+        image: "/website_member_photos/weiming-2.jpeg",
+        backImage: "/website_member_photos/weiming-1.webp",
+        schoolYear: "Year 3 Computer Engineering Student",
+        linkedin: "https://www.linkedin.com/in/wongweiming/",
+        github: "https://github.com/Alvin0523",  
+
+      },
+      ], 
+      electrical : [
+        {
+        name: "WANG Yizhou",
+        role: "CRO, Electrical Lead",
+        image: "/website_member_photos/scott-1.jpg",
+        backImage: "/website_member_photos/scott-2.jpg",
+        schoolYear: "Year 3 Computer Science Student",
+        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        github: "https://github.com/scott-cjx",  
+      },
+      ],
+      business : [
+        {
+        name: "XU Yiwei",
+        role: "COO, CHRO, Business Lead",
+        image: "/website_member_photos/jen-1.jpg",
+        backImage: "/website_member_photos/jen-2.jpg",
+        schoolYear: "Year 4 Biological Sciences Student",
+        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+      },
+      {
+        name: "CAO Luhan",
+        role: "COO, CHRO, Business Lead",
+        image: "/website_member_photos/jen-1.jpg",
+        backImage: "/website_member_photos/jen-2.jpg",
+        schoolYear: "Year 4 Biological Sciences Student",
+        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+      },{
+        name: "LIANG Yihan",
+        role: "COO, CHRO, Business Lead",
+        image: "/website_member_photos/jen-1.jpg",
+        backImage: "/website_member_photos/jen-2.jpg",
+        schoolYear: "Year 4 Biological Sciences Student",
+        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+      },
+      ],
+      webnapp : [
+        {
+        name: "WANG Yizhou",
+        role: "Web&App Lead",
+        image: "/website_member_photos/zixuan-2.jpg",
+        backImage: "/website_member_photos/zixuan-1.jpeg",
+        schoolYear: "Year 2 Computer Science Student",
+        linkedin: "https://www.linkedin.com/in/tanzixuantzx",
+        github: "https://github.com/zixuantannn",
+      },
+      ],
+      drone : [
+        {
+        name: "HU Donghui",
+        role: "CRO, Electrical Lead",
+        image: "/website_member_photos/donghui-1.jpg",
+        backImage: "/website_member_photos/donghui-2.jpg",
+        schoolYear: "Year 3 Computer Science Student",
+        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        github: "https://github.com/scott-cjx",  
+      },
+      {
+        name: "HUANG Kangyi",
+        role: "Research Member",
+        image: "/website_member_photos/rayyingzhan-2.jpg",
+        backImage: "/website_member_photos/rayyingzhan-1.jpg",
+        schoolYear: "Computer Engineering Student",
+        linkedin: "https://www.linkedin.com/in/ray-shao/",
+        github: "https://github.com/frieddeli",
+
+      },
+          {
+        name: "YAO Fangming",
+        role: "Research Member",
+        image: "/website_member_photos/chengjing-1.jpg",
+        backImage: "/website_member_photos/chengjing-2.jpg",
+        schoolYear: "Year 3 Electrical and Electronic Engineering Student",
+        linkedin: "https://www.linkedin.com/in/cheng-jing-hao-74715a30a/",
+        github: "https://github.com/hchengjing",
+      },
+      ],
+      advisors: [
+      {
+        name: "XU Hongli",
+        role: "Team Advisor",
+        image: "/website_member_photos/hongli-1.jpg",
+        backImage: "/website_member_photos/hongli-2.jpg",
+        schoolYear: "Professor, Faculty of Robot Science and Engineering",
+        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+      },
+      {
+        name: "RU Jingyu",
+        role: "Team Advisor",
+        image: "/website_member_photos/jingyu-1.jpg",
+        backImage: "/website_member_photos/jingyu-2.jpg",
+        schoolYear: "Associate Professor, Faculty of Robot Science and Engineering",
+      },
+      {
+        name: "WANG Junyi",
+        role: "Team Advisor",
+        image: "/website_member_photos/junyi-1.jpg",
+        backImage: "/website_member_photos/junyi-2.jpg",
+        schoolYear: "Professor, Faculty of Robot Science and Engineering",
+        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+      },
+      {
+        name: "WANG Shuai",
+        role: "Team Advisor",
+        image: "/website_member_photos/shuai-1.jpg",
+        backImage: "/website_member_photos/shuai-2.jpg",
+        schoolYear: "Laboratory Technician, Faculty of Robot Science and Engineering",
+        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+      },
+      ]
+  }
+};
+
+export default teamData;
