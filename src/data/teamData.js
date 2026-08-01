@@ -448,6 +448,15 @@ const teamData = {
         linkedin: "https://www.linkedin.com/in/cheng-jing-hao-74715a30a/",
         github: "https://github.com/hchengjing",
       },
+      {
+        name: "WANG Yousheng",
+        role: "Drone Member",
+        image: "/website_member_photos/yousheng-1.jpg",
+        backImage: "/website_member_photos/yousheng-2.jpg",
+        schoolYear: "Year 3 Computer Science Student",
+        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        github: "https://github.com/scott-cjx",  
+      },
       ],
       advisors: [
       {
