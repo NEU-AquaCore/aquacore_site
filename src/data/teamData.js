@@ -7,8 +7,8 @@ const teamData = {
         image: "/website_member_photos/zhiyu-1.jpg",
         backImage: "/website_member_photos/zhiyu-2.jpg",
         schoolYear: "Year 2 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
-        github: "https://github.com/lucvt001",
+        //linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
+        //github: "https://github.com/lucvt001",
       },
       {
         name: "GAO Zhifu",
@@ -16,8 +16,8 @@ const teamData = {
         image: "/website_member_photos/zhifu-1.jpg",
         backImage: "/website_member_photos/zhifu-2.jpg",
         schoolYear: "Year 4 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/toh-jia-hao-65bb39229/",
-        github: "https://github.com/Evintjh",
+        //linkedin: "https://www.linkedin.com/in/toh-jia-hao-65bb39229/",
+        //github: "https://github.com/Evintjh",
       },
       {
         name: "WANG Xin",
@@ -25,7 +25,7 @@ const teamData = {
         image: "/website_member_photos/xin-1.jpg",
         backImage: "/website_member_photos/xin-2.jpg",
         schoolYear: "Year 2 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+        //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
 
       },
       {
@@ -34,8 +34,8 @@ const teamData = {
         image: "/website_member_photos/ruilin-1.jpg",
         backImage: "/website_member_photos/ruilin-2.jpg",
         schoolYear: "Year 2 Biological Sciences Student",
-        linkedin: "https://linkedin.com/in/kevinzhang",
-        github: "https://github.com/jennifergoh",
+        //linkedin: "https://linkedin.com/in/kevinzhang",
+        //github: "https://github.com/jennifergoh",
       },
       {
         name: "LU Xiaoyao",
@@ -43,7 +43,7 @@ const teamData = {
         image: "/website_member_photos/xiaoyao-1.jpg",
         backImage: "/website_member_photos/xiaoyao-2.jpg",
         schoolYear: "Year 4 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/zach-low",
+        //linkedin: "https://www.linkedin.com/in/zach-low",
 
       },
 
@@ -53,8 +53,8 @@ const teamData = {
         image: "/website_member_photos/bingzhuo-1.jpg",
         backImage: "/website_member_photos/bingzhuo-2.jpg",
         schoolYear: "Year 1 Mechanical Engineering Student",
-        linkedin: "https://linkedin.com/in/kevinzhang",
-        github: "https://github.com/rushdan",
+        //linkedin: "https://linkedin.com/in/kevinzhang",
+        //github: "https://github.com/rushdan",
       },
       {
         name: "WANG Guocun",
@@ -70,8 +70,8 @@ const teamData = {
         image: "/website_member_photos/guolin-1.jpeg",
         backImage: "/website_member_photos/guolin-2.jpg",
         schoolYear: "Year 2 Computer Engineering Student",
-        linkedin: "https://www.linkedin.com/in/abdillah-goh-9440b2198/",
-        github: "https://github.com/gohabdillah",
+        //linkedin: "https://www.linkedin.com/in/abdillah-goh-9440b2198/",
+        //github: "https://github.com/gohabdillah",
       },
       {
         name: "CHEN Jiajun",
@@ -79,7 +79,7 @@ const teamData = {
         image: "/website_member_photos/jiajun-1.jpg",
         backImage: "/website_member_photos/jiajun-2.jpg",
         schoolYear: "Year 2 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
+        //linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
 
       },
 
@@ -94,7 +94,7 @@ const teamData = {
         image: "/website_member_photos/huaiyu-1.jpg",
         backImage: "/website_member_photos/huaiyu-2.jpg",
         schoolYear: "Year 3 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/zach-low",
+        //linkedin: "https://www.linkedin.com/in/zach-low",
       },
       {
         name: "SUN Zhiyao",
@@ -102,8 +102,8 @@ const teamData = {
         image: "/website_member_photos/zhiyao-1.jpg",
         backImage: "/website_member_photos/zhiyao-2.jpg",
         schoolYear: "Year 3 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
-        github: "https://github.com/lucvt001",  
+        //linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
+        //github: "https://github.com/lucvt001",  
       },
       {
         name: "ZHONG Ye",
@@ -111,7 +111,7 @@ const teamData = {
         image: "/website_member_photos/ye-1.jpg",
         backImage: "/website_member_photos/ye-2.jpg",
         schoolYear: "Year 3 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+        //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
       },
       {
         name: "GUO Yue",
@@ -119,7 +119,7 @@ const teamData = {
         image: "/website_member_photos/yue-1.jpg",
         backImage: "/website_member_photos/yue-2.jpg",
         schoolYear: "Year 3 Biological Sciences Student",
-        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+        //linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
       },
       {
         name: "YANG Zheyu",
@@ -127,8 +127,8 @@ const teamData = {
         image: "/website_member_photos/zheyu-2.jpg",
         backImage: "/website_member_photos/zheyu-1.jpg",
         schoolYear: "Year 4 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/eozk/",
-        github: "https://github.com/eozkzoe",  
+        //linkedin: "https://www.linkedin.com/in/eozk/",
+        //github: "https://github.com/eozkzoe",  
 
       },
     ],
@@ -139,7 +139,7 @@ const teamData = {
         image: "/website_member_photos/zac-1.jpg",
         backImage: "/website_member_photos/zac-2.jpg",
         schoolYear: "Year 4 Mechanical Student",
-        linkedin: "https://www.linkedin.com/in/zach-low/",
+        //linkedin: "https://www.linkedin.com/in/zach-low/",
       },
       {
         name: "HUANG Kangyi",
@@ -147,7 +147,7 @@ const teamData = {
         image: "/website_member_photos/arthur-1.jpg",
         backImage: "/website_member_photos/arthur-2.jpg",
         schoolYear: "Year 3 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+        //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
       },
 
     ],
@@ -158,7 +158,7 @@ const teamData = {
         image: "/website_member_photos/ethanong-2.jpg",
         backImage: "/website_member_photos/ethanong-1.JPG",
         schoolYear: "Year 4 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/eozk/",
+        //linkedin: "https://www.linkedin.com/in/eozk/",
       },
       {
         name: "ZHONG Ye",
@@ -166,8 +166,8 @@ const teamData = {
         image: "/website_member_photos/luc-1.jpg",
         backImage: "/website_member_photos/luc-2.jpg",
         schoolYear: "Year 3 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
-        github: "https://github.com/lucvt001",
+        //linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
+        //github: "https://github.com/lucvt001",
       },
       {
         name: "WANG Yizhou",
@@ -175,8 +175,8 @@ const teamData = {
         image: "/website_member_photos/jiahao-2.jpg",
         backImage: "/website_member_photos/jiahao-1.jpg",
         schoolYear: "Year 4 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/toh-jia-hao-65bb39229/",
-        github: "https://github.com/Evintjh",
+        //linkedin: "https://www.linkedin.com/in/toh-jia-hao-65bb39229/",
+        //github: "https://github.com/Evintjh",
       },
 
 
@@ -188,8 +188,8 @@ const teamData = {
         image: "/website_member_photos/zheyu-1.jpg",
         backImage: "/website_member_photos/zheyu-2.jpg",
         schoolYear: "Year 2 Computer Science Student",
-        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
-        github: "https://github.com/scott-cjx",  
+        //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        //github: "https://github.com/scott-cjx",  
       },
     ],
     business: [
@@ -199,7 +199,7 @@ const teamData = {
         image: "/website_member_photos/jen-1.jpg",
         backImage: "/website_member_photos/jen-2.jpg",
         schoolYear: "Year 3 Biological Sciences Student",
-        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+        //linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
       },
 
     ],
@@ -210,7 +210,7 @@ const teamData = {
         image: "/website_member_photos/hongli-1.jpg",
         backImage: "/website_member_photos/hongli-2.jpg",
         schoolYear: "Professor, Faculty of Robot Science and Engineering",
-        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+        //linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
       },
       {
         name: "RU Jingyu",
@@ -225,7 +225,7 @@ const teamData = {
         image: "/website_member_photos/junyi-1.jpg",
         backImage: "/website_member_photos/junyi-2.jpg",
         schoolYear: "Professor, Faculty of Robot Science and Engineering",
-        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+        //linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
       },
       {
         name: "WANG Shuai",
@@ -233,7 +233,7 @@ const teamData = {
         image: "/website_member_photos/shuai-1.jpg",
         backImage: "/website_member_photos/shuai-2.jpg",
         schoolYear: "Laboratory Technician, Faculty of Robot Science and Engineering",
-        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+        //linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
       },
     ]
   },
@@ -245,7 +245,7 @@ const teamData = {
         image: "/website_member_photos/yibo-1.jpg",
         backImage: "/website_member_photos/yibo-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
-        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+        //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
         github: "https://github.com/g-n-mkbk"
       },
       {
@@ -254,7 +254,7 @@ const teamData = {
         image: "/website_member_photos/yizhou-1.jpg",
         backImage: "/website_member_photos/yizhou-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
-        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+        //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
         github: "https://github.com/HelloEaJoe"
       },
       {
@@ -263,7 +263,7 @@ const teamData = {
         image: "/website_member_photos/kangyi-1.jpg",
         backImage: "/website_member_photos/kangyi-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
-        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
+        //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
       },
       {
         name: "GUO Hongyuan",
@@ -271,7 +271,7 @@ const teamData = {
         image: "/website_member_photos/hongyuan-2.jpg",
         backImage: "/website_member_photos/hongyuan-2.jpg",
         schoolYear: "Year 3 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
+        //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
       },
       {
         name: "YAO Fangming",
@@ -279,8 +279,8 @@ const teamData = {
         image: "/website_member_photos/fangming-1.jpg",
         backImage: "/website_member_photos/fangming-2.jpg",
         schoolYear: "Year 3 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
-        github: "https://github.com/lucvt001",  
+        //linkedin: "https://www.linkedin.com/in/luc-vu-tien-601138131/",
+        //github: "https://github.com/lucvt001",  
       },
       {
         name: "HU Donghui",
@@ -288,8 +288,8 @@ const teamData = {
         image: "/website_member_photos/donghui-1.jpg",
         backImage: "/website_member_photos/donghui-2.jpg",
         schoolYear: "Year 3 Computer Science Student",
-        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
-        github: "https://github.com/scott-cjx",  
+        //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        //github: "https://github.com/scott-cjx",  
       },
       {
         name: "ZHOU Kaiyang",
@@ -297,7 +297,7 @@ const teamData = {
         image: "/website_member_photos/kaiyang-1.jpg",
         backImage: "/website_member_photos/kaiyang-2.jpg",
         schoolYear: "Year 3 Artificial Intelligence Student",
-        linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
+        //linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
       },
       {
         name: "WANG Chi",
@@ -305,7 +305,7 @@ const teamData = {
         image: "/website_member_photos/chi-1.jpg",
         backImage: "/website_member_photos/chi-2.jpg",
         schoolYear: "Year 3 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
+        //linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
       },
       {
         name: "LI Longxian",
@@ -313,7 +313,7 @@ const teamData = {
         image: "/website_member_photos/longxian-1.jpg",
         backImage: "/website_member_photos/longxian-2.jpg",
         schoolYear: "Year 3 Artificial Intelligence Student",
-        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+        //linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
       },
       ],
       mechanical : [
@@ -323,7 +323,7 @@ const teamData = {
         image: "/website_member_photos/kangyi-1.jpg",
         backImage: "/website_member_photos/kangyi-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
-        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
+        //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
       },
       {
         name: "CAI Yuze",
@@ -331,7 +331,7 @@ const teamData = {
         image: "/website_member_photos/yuze-1.jpg",
         backImage: "/website_member_photos/yuze-2.jpg",
         schoolYear: "Year 4 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
+        //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/",
       },
       {
         name: "CHEN Xiangtao",
@@ -339,7 +339,7 @@ const teamData = {
         image: "/website_member_photos/xiangtao-1.jpg",
         backImage: "/website_member_photos/xiangtao-2.jpg",
         schoolYear: "Year 4 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
+        //linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
       },
       {
         name: "YUE Qihang",
@@ -347,7 +347,7 @@ const teamData = {
         image: "/website_member_photos/qihang-2.jpg",
         backImage: "/website_member_photos/qihang-1.jpg",
         schoolYear: "Year 3 Mechanical Engineering Student",
-        linkedin: "https://www.linkedin.com/in/fangzhou-liu-83887b28b/",
+        //linkedin: "https://www.linkedin.com/in/fangzhou-liu-83887b28b/",
         },
       ],
       software : [
@@ -357,8 +357,8 @@ const teamData = {
         image: "/website_member_photos/weiming-2.jpeg",
         backImage: "/website_member_photos/weiming-1.webp",
         schoolYear: "Year 3 Computer Engineering Student",
-        linkedin: "https://www.linkedin.com/in/wongweiming/",
-        github: "https://github.com/Alvin0523",  
+        //linkedin: "https://www.linkedin.com/in/wongweiming/",
+        //github: "https://github.com/Alvin0523",  
 
       },
       {
@@ -367,8 +367,8 @@ const teamData = {
         image: "/website_member_photos/zhizhong-1.jpg",
         backImage: "/website_member_photos/zhizhong-2.jpg",
         schoolYear: "Year 2 Robotics Engineering Student",
-        linkedin: "https://www.linkedin.com/in/wongweiming/",
-        github: "https://github.com/Alvin0523",  
+        //linkedin: "https://www.linkedin.com/in/wongweiming/",
+        //github: "https://github.com/Alvin0523",  
 
       },
       ], 
@@ -379,8 +379,8 @@ const teamData = {
         image: "/website_member_photos/scott-1.jpg",
         backImage: "/website_member_photos/scott-2.jpg",
         schoolYear: "Year 3 Computer Science Student",
-        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
-        github: "https://github.com/scott-cjx",  
+        //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        github: "https://github.com/HelloEaJoe",  
       },
       ],
       business : [
@@ -390,7 +390,7 @@ const teamData = {
         image: "/website_member_photos/jen-1.jpg",
         backImage: "/website_member_photos/jen-2.jpg",
         schoolYear: "Year 4 Biological Sciences Student",
-        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+        //linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
       },
       {
         name: "CAO Luhan",
@@ -398,14 +398,14 @@ const teamData = {
         image: "/website_member_photos/jen-1.jpg",
         backImage: "/website_member_photos/jen-2.jpg",
         schoolYear: "Year 4 Biological Sciences Student",
-        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+        //linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
       },{
         name: "LIANG Yihan",
         role: "COO, CHRO, Business Lead",
         image: "/website_member_photos/jen-1.jpg",
         backImage: "/website_member_photos/jen-2.jpg",
         schoolYear: "Year 4 Biological Sciences Student",
-        linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
+        //linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
       },
       ],
       webnapp : [
@@ -415,8 +415,8 @@ const teamData = {
         image: "/website_member_photos/zixuan-2.jpg",
         backImage: "/website_member_photos/zixuan-1.jpeg",
         schoolYear: "Year 2 Computer Science Student",
-        linkedin: "https://www.linkedin.com/in/tanzixuantzx",
-        github: "https://github.com/zixuantannn",
+        //linkedin: "https://www.linkedin.com/in/tanzixuantzx",
+        //github: "https://github.com/zixuantannn",
       },
       ],
       drone : [
@@ -426,8 +426,8 @@ const teamData = {
         image: "/website_member_photos/donghui-1.jpg",
         backImage: "/website_member_photos/donghui-2.jpg",
         schoolYear: "Year 3 Computer Science Student",
-        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
-        github: "https://github.com/scott-cjx",  
+        //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        //github: "https://github.com/scott-cjx",  
       },
       {
         name: "HUANG Kangyi",
@@ -435,8 +435,8 @@ const teamData = {
         image: "/website_member_photos/rayyingzhan-2.jpg",
         backImage: "/website_member_photos/rayyingzhan-1.jpg",
         schoolYear: "Computer Engineering Student",
-        linkedin: "https://www.linkedin.com/in/ray-shao/",
-        github: "https://github.com/frieddeli",
+        //linkedin: "https://www.linkedin.com/in/ray-shao/",
+        //github: "https://github.com/frieddeli",
 
       },
           {
@@ -445,8 +445,8 @@ const teamData = {
         image: "/website_member_photos/chengjing-1.jpg",
         backImage: "/website_member_photos/chengjing-2.jpg",
         schoolYear: "Year 3 Electrical and Electronic Engineering Student",
-        linkedin: "https://www.linkedin.com/in/cheng-jing-hao-74715a30a/",
-        github: "https://github.com/hchengjing",
+        //linkedin: "https://www.linkedin.com/in/cheng-jing-hao-74715a30a/",
+        //github: "https://github.com/hchengjing",
       },
       {
         name: "WANG Yousheng",
@@ -454,8 +454,8 @@ const teamData = {
         image: "/website_member_photos/yousheng-1.jpg",
         backImage: "/website_member_photos/yousheng-2.jpg",
         schoolYear: "Year 3 Computer Science Student",
-        linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
-        github: "https://github.com/scott-cjx",  
+        //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        //github: "https://github.com/scott-cjx",  
       },
       ],
       advisors: [
@@ -465,14 +465,14 @@ const teamData = {
         image: "/website_member_photos/hongli-1.jpg",
         backImage: "/website_member_photos/hongli-2.jpg",
         schoolYear: "Professor, Faculty of Robot Science and Engineering",
-        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+        //linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
       },
       {
         name: "RU Jingyu",
         role: "Team Advisor",
         image: "/website_member_photos/jingyu-1.jpg",
         backImage: "/website_member_photos/jingyu-2.jpg",
-        schoolYear: "Associate Professor, Faculty of Robot Science and Engineering",
+        //schoolYear: "Associate Professor, Faculty of Robot Science and Engineering",
       },
       {
         name: "WANG Junyi",
@@ -480,7 +480,7 @@ const teamData = {
         image: "/website_member_photos/junyi-1.jpg",
         backImage: "/website_member_photos/junyi-2.jpg",
         schoolYear: "Professor, Faculty of Robot Science and Engineering",
-        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+        //linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
       },
       {
         name: "WANG Shuai",
@@ -488,7 +488,7 @@ const teamData = {
         image: "/website_member_photos/shuai-1.jpg",
         backImage: "/website_member_photos/shuai-2.jpg",
         schoolYear: "Laboratory Technician, Faculty of Robot Science and Engineering",
-        linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+        //linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
       },
       ]
   }
