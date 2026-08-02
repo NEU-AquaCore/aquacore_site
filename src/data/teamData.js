@@ -66,7 +66,7 @@ const teamData = {
       },
       {
         name: "LI Guolin",
-        role: "Website Developer",
+        role: "Hardware Lead",
         image: "/website_member_photos/guolin-1.jpeg",
         backImage: "/website_member_photos/guolin-2.jpg",
         schoolYear: "Year 4 Robotics Engineering Student",
