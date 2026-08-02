@@ -62,7 +62,7 @@ const teamData = {
         image: "/website_member_photos/guocun-1.jpg",
         backImage: "/website_member_photos/guocun-2.jpg",
         schoolYear: "Year 4 Robotics Engineering Student",
-        linkedin: "https://www.linkedin.com/in/cheo-le-xian-92305b287/",
+        //linkedin: "https://www.linkedin.com/in/cheo-le-xian-92305b287/",
       },
       {
         name: "LI Guolin",
