@@ -391,6 +391,15 @@ const teamData = {
         //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
         //github: "https://github.com/HelloEaJoe",  
       },
+      {
+        name: "WU Jiawang",
+        role: "Electrical Member",
+        image: "/website_member_photos/jiawang-1.jpg",
+        backImage: "/website_member_photos/jiawang-2.jpg",
+        schoolYear: "Year 2 Robotics Engineering Student",
+        //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
+        //github: "https://github.com/HelloEaJoe",  
+      },
       ],
       business : [
         {
