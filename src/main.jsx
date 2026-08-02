@@ -42,10 +42,10 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="kevin" element={<KevinPage />} />
-          <Route path="hydra" element={<HydraPage />} />
+          {/* <Route path="kevin" element={<KevinPage />} /> */}
+          {/* <Route path="hydra" element={<HydraPage />} /> */}
           <Route path="clutch" element={<ClutchPage />} />
-          <Route path="kraken" element={<KrakenPage />} />
+          {/* <Route path="kraken" element={<KrakenPage />} /> */}
           <Route path="team" element={<TeamPage />} />
           <Route path="vehicles" element={<VehiclesPage />} />
           <Route path="competitions" element={<CompetitionsPage />} />
@@ -53,12 +53,12 @@ createRoot(document.getElementById('root')).render(
           <Route path="outreach" element={<OutreachPage />} />
           <Route path="sponsors" element={<SponsorsPage />} />
           <Route path="contact" element={<ContactPage />} />
-          <Route path="lucy" element={<LucyPage />} />
+          {/* <Route path="lucy" element={<LucyPage />} /> */}
           {/* <Route path="focus" element={<FocusPage />} /> */}
-          <Route path="robosub2025" element={<Robosub2025Page />} />
-          <Route path="robosub2026" element={<Robosub2026Page />} />
-          <Route path="robosub2026hydramechanical" element={<RoboSub2026SubsystemPage vehicleId="hydra" subsystemId="mechanical" />} />
-          <Route path="hydra/mechanical" element={<RoboSub2026SubsystemPage vehicleId="hydra" subsystemId="mechanical" />} />
+          {/* <Route path="robosub2025" element={<Robosub2025Page />} /> */}
+          {/* <Route path="robosub2026" element={<Robosub2026Page />} /> */}
+          {/* <Route path="robosub2026hydramechanical" element={<RoboSub2026SubsystemPage vehicleId="hydra" subsystemId="mechanical" />} /> */}
+          {/* <Route path="hydra/mechanical" element={<RoboSub2026SubsystemPage vehicleId="hydra" subsystemId="mechanical" />} />
           <Route path="hydra/electrical" element={<RoboSub2026SubsystemPage vehicleId="hydra" subsystemId="electrical" />} />
           <Route path="hydra/software" element={<RoboSub2026SubsystemPage vehicleId="hydra" subsystemId="software" />} />
           <Route path="kraken/mechanical" element={<RoboSub2026SubsystemPage vehicleId="kraken" subsystemId="mechanical" />} />
@@ -76,7 +76,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="joinus" element={<JoinUsPage />} />
           <Route path="game" element={<GamePage />} />
           <Route path="blog" element={<TeamBlogPage />} />
-          <Route path="blog/:slug" element={<TeamBlogPostPage />} />
+          <Route path="blog/:slug" element={<TeamBlogPostPage />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
