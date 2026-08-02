@@ -26,7 +26,7 @@ export default function ContactPage() {
       {/* Contact Hero Banner */}
       <section
         className="relative w-full min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-8 py-24 bg-cover bg-center text-white"
-        //style={{ backgroundImage: "url('/images/sauvc2025.jpeg')" }}
+        style={{ backgroundImage: "url('/images/team-2x.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/60 z-0" />
         <div className="relative z-10">
