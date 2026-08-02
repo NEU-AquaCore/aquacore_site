@@ -72,10 +72,10 @@ createRoot(document.getElementById('root')).render(
           <Route path="yyss" element={<YYSSPage />} />
           <Route path="marinevehicle" element={<MarineVehiclePage />} />
           <Route path="computervision" element={<ComputerVisionPage />} />
-          <Route path="blender3d" element={<Blender3DPage />} />
+          <Route path="blender3d" element={<Blender3DPage />} /> */}
           <Route path="joinus" element={<JoinUsPage />} />
           <Route path="game" element={<GamePage />} />
-          <Route path="blog" element={<TeamBlogPage />} />
+          {/* <Route path="blog" element={<TeamBlogPage />} />
           <Route path="blog/:slug" element={<TeamBlogPostPage />} /> */}
         </Route>
       </Routes>
