@@ -2,7 +2,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function ClutchOptimized({ scale = [0.007, 0.007, 0.007], ...props }) {
-  const { scene } = useGLTF('/clutch3.glb', '/draco/');
+  const { scene } = useGLTF('/clutch4.glb', '/draco/');
   
   return (
     <primitive 
@@ -13,4 +13,4 @@ export function ClutchOptimized({ scale = [0.007, 0.007, 0.007], ...props }) {
   );
 }
 
-useGLTF.preload('/clutch3.glb', '/draco/');
+useGLTF.preload('/clutch4.glb', '/draco/');
