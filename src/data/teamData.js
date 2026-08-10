@@ -461,7 +461,7 @@ const teamData = {
         name: "YAO Fangming",
         role: "Research Member",
         image: "/website_member_photos/fangming-1.jpg",
-        backImage: "/website_member_photos/fangming-1.jpg",
+        backImage: "/website_member_photos/fangming-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
         //linkedin: "https://www.linkedin.com/in/cheng-jing-hao-74715a30a/",
         //github: "https://github.com/hchengjing",
