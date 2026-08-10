@@ -289,7 +289,7 @@ const teamData = {
         backImage: "/website_member_photos/donghui-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
         //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
-        //github: "https://github.com/scott-cjx",  
+        github: "https://github.com/david312213",  
       },
       {
         name: "ZHOU Kaiyang",
@@ -445,7 +445,7 @@ const teamData = {
         backImage: "/website_member_photos/donghui-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
         //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
-        //github: "https://github.com/scott-cjx",  
+        github: "https://github.com/david312213",  
       },
       {
         name: "HUANG Kangyi",
