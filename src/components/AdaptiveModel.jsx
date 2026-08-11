@@ -5,6 +5,7 @@ import { LucyOptimized } from '../LucyOptimized';
 import { HydraOptimized } from '../HydraOptimized';
 import { KrakenOptimized } from '../KrakenOptimized';
 import { ClutchOptimized } from '../ClutchOptimized';
+import { ChallengeOptimized } from '../ChallengeOptimized';
 
 
 export function AdaptiveModel({ capability, scale = [5, 5, 5], modelType = 'kevin', ...props }) {
@@ -72,6 +73,15 @@ export function AdaptiveModel({ capability, scale = [5, 5, 5], modelType = 'kevi
     );
   }
 
+  if (modelType === 'challenge') {
+    return (
+      <ChallengeOptimized
+        scale={[0.0052, 0.0052, 0.0052]}
+        {...props}
+      />
+    );
+  }
+
   if (modelType === 'hydra') {
     return (
       <HydraOptimized
@@ -108,6 +118,8 @@ function getModelUrl(modelType) {
       return '/krakensmalloutput.glb';
     case 'clutch':
       return '/clutch3.glb';
+    case 'challenge':
+      return '/challenge.glb';
     case 'kevin':
     default:
       return '/kevinfix.glb';
