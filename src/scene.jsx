@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { KevinOptimized } from './KevinOptimized.jsx';
 import { HydraOptimized } from './HydraOptimized.jsx';
 import { ClutchOptimized } from './ClutchOptimized.jsx';
+import { ChallengeOptimized } from './ChallengeOptimized.jsx';
 import { KrakenOptimized } from './KrakenOptimized.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -84,6 +85,8 @@ const Scene = ({ progress, modelType = 'kevin' }) => {
                 <HydraOptimized scale={[2.5, 2.5, 2.5]} />
             ) : modelType === 'clutch' ? (
                 <ClutchOptimized scale={[0.003, 0.003, 0.003]} />
+            ) : modelType === 'challenge' ? (
+                <ChallengeOptimized scale={[0.003, 0.003, 0.003]} />
             ) : modelType === 'kraken' ? (
                 <KrakenOptimized scale={[2.5, 2.5, 2.5]} />
             ) : (
