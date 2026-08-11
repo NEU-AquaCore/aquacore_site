@@ -440,7 +440,7 @@ function TeamSubmenu({ year }) {
       { id: "software", label: "Software" },
       { id: "electrical", label: "Electrical" },
       { id: "business", label: "Business" },
-      { id: "webnapp", label: "Web&App" }, 
+      { id: "webdev", label: "Web Dev" }, 
       { id: "drone", label: "Drone" },
       { id: "advisors", label: "Advisors" },
     ];
@@ -469,7 +469,7 @@ const teamDescriptions = {
         "Engineering the power, circuits, and embedded systems that keep our vehicles running reliably underwater.",
       business:
         "Managing sponsorships, partnerships, outreach, and branding to sustain and grow Team Mecatron.",
-      webnapp:
+      webdev:
         "Developing Mecatron’s digital ecosystem — from web platforms to interactive apps that expand outreach and usability.",
       drone:
         "Pioneering experimental subsystems and outreach prototypes with real-world impact.",
