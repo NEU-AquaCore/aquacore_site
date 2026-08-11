@@ -468,9 +468,9 @@ const teamDescriptions = {
       electrical:
         "Engineering the power, circuits, and embedded systems that keep our vehicles running reliably underwater.",
       business:
-        "Managing sponsorships, partnerships, outreach, and branding to sustain and grow Team Mecatron.",
+        "Managing sponsorships, partnerships, outreach, and branding to sustain and grow Team AquaCore.",
       webdev:
-        "Developing Mecatron’s digital ecosystem — from web platforms to interactive apps that expand outreach and usability.",
+        "Developing AquaCore’s digital ecosystem — from web platforms to interactive apps that expand outreach and usability.",
       drone:
         "Pioneering experimental subsystems and outreach prototypes with real-world impact.",
       advisors:
@@ -481,7 +481,7 @@ const teamDescriptions = {
         hardware: "Designing and building the mechanical systems that bring our autonomous vehicles to life.",
         software: "Developing the brains behind our AUVs — from navigation algorithms to computer vision and control systems.",
         electrical: "Engineering the power, circuits, and embedded systems that keep our vehicles running reliably underwater.",
-        business: "Managing sponsorships, partnerships, outreach, and branding to sustain and grow Team Mecatron.",
+        business: "Managing sponsorships, partnerships, outreach, and branding to sustain and grow Team AquaCore.",
         advisors: "Providing mentorship, technical guidance, and industry insight to elevate the team’s capabilities."
       },
       'AY24/25': {
