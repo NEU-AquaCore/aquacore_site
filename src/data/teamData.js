@@ -426,7 +426,7 @@ const teamData = {
         //linkedin: "https://www.linkedin.com/in/jennifer-zhen-ni-goh/",
       },
       ],
-      webnapp : [
+      webdev : [
         {
         name: "WANG Yizhou",
         role: "Web&App Lead",
