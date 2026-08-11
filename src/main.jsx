@@ -6,6 +6,7 @@ import Home from './Home.jsx'
 import KevinPage from './KevinPage.jsx'
 import HydraPage from './HydraPage.jsx'
 import ClutchPage from './ClutchPage.jsx'
+import ChallengePage from './ChallengePage.jsx'
 import KrakenPage from './KrakenPage.jsx';
 import TeamPage from './TeamPage.jsx'
 import VehiclesPage from './VehiclesPage.jsx'
@@ -45,6 +46,7 @@ createRoot(document.getElementById('root')).render(
           {/* <Route path="kevin" element={<KevinPage />} /> */}
           {/* <Route path="hydra" element={<HydraPage />} /> */}
           <Route path="clutch" element={<ClutchPage />} />
+          <Route path="challenge" element={<ChallengePage />} />
           {/* <Route path="kraken" element={<KrakenPage />} /> */}
           <Route path="team" element={<TeamPage />} />
           <Route path="vehicles" element={<VehiclesPage />} />
