@@ -429,7 +429,7 @@ const teamData = {
       webdev : [
         {
         name: "WANG Yizhou",
-        role: "Web&App Lead",
+        role: "Web Dev Lead",
         image: "/website_member_photos/yizhou-1.jpg",
         backImage: "/website_member_photos/yizhou-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
