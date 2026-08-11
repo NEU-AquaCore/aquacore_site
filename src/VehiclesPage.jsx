@@ -36,6 +36,21 @@ export default function VehiclesPage() {
           ]}
         />
 
+        {/* Challenge Section */}
+        <VehicleDescription
+          title="Challenge 2026"
+          description="Challenge 2026 is our latest innovation, combining the best features. It is engineered to support high-performance dropper and gripper mechanisms, while maintaining a compact size."
+          linkTo="/challenge"
+          highlightBg={true}
+          modelType="challenge"
+          modelScale={[5.5, 5.5, 5.5]}
+          tags={[
+            "Topology Optimization",
+            "Classic Frame Design",
+            "Symmetric 6-thruster Configuration"
+          ]}
+        />
+
         {/* Hydra Section */}
         {/* <VehicleDescription
           title="Hydra 2026"
