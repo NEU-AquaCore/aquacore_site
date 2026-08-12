@@ -342,7 +342,7 @@ const teamData = {
         //linkedin: "https://www.linkedin.com/in/maximus-yeo-0679122bb/",
       },
       {
-        name: "YUE Qihang",
+        name: "LE Qihang",
         role: "Mechanical Member",
         image: "/website_member_photos/qihang-2.jpg",
         backImage: "/website_member_photos/qihang-1.jpg",
