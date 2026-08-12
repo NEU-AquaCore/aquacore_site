@@ -349,6 +349,14 @@ const teamData = {
         schoolYear: "Year 2 Robotics Engineering Student",
         //linkedin: "https://www.linkedin.com/in/fangzhou-liu-83887b28b/",
         },
+        {
+        name: "TONG Xinyang",
+        role: "Mechanical Member",
+        image: "/website_member_photos/qihang-2.jpg",
+        backImage: "/website_member_photos/qihang-1.jpg",
+        schoolYear: "Year 2 Artificial Intelligence Student",
+        //linkedin: "https://www.linkedin.com/in/fangzhou-liu-83887b28b/",
+        },
       ],
       software : [
         {
