@@ -7,7 +7,7 @@ export default function CompetitionsPage() {
       title: "ROBOCUP 2026",
       date: "AUGUST 2026",
       description: "Clutch - Next Generation AUVs coming soon!",
-      image: "/competition/images/robosub2026-bots.jpg",
+      image: "/competition/images/robocup2026logo.png",
       status: "upcoming",
       //link:"/robosub2026"
     },
@@ -16,7 +16,7 @@ export default function CompetitionsPage() {
       title: "URPC 2026",
       date: "NOVEMBER 2026",
       description: "Hope we win the URPC 2026!",
-      image: "/competition/images/competition_img_1.jpg",
+      image: "/competition/images/urpc2026logo.png",
       status: "upcoming",
       //link:"/robosub2026"
     }
