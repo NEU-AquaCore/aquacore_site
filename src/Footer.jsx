@@ -44,7 +44,7 @@ export default function Footer() {
         </p>
         {/* Social Icons */}
         <div className="flex gap-6 mt-6 mb-6 items-center">
-          {/* <a href="https://space.bilibili.com/3707042529282584" className="rounded-full border border-gray-500 p-2 hover:bg-blue-500 hover:text-white transition"><FaBilibili size={22} /></a> */}
+          <a href="https://space.bilibili.com/3707042529282584" className="rounded-full border border-gray-500 p-2 hover:bg-blue-500 hover:text-white transition"><FaBilibili size={22} /></a>
           <a href="https://www.instagram.com/neu_aquacore" className="rounded-full border border-gray-500 p-2 hover:bg-blue-500 hover:text-white transition"><FaInstagram size={22} /></a>
           {/* <a href="https://sg.linkedin.com/company/ntu-mecatron" className="rounded-full border border-gray-500 p-2 hover:bg-blue-500 hover:text-white transition"><FaLinkedinIn size={22} /></a> */}
           <a href="https://github.com/NEU-AquaCore" className="rounded-full border border-gray-500 p-2 hover:bg-blue-500 hover:text-white transition"><FaGithub size={22} /></a>
