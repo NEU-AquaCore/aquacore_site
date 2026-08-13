@@ -70,7 +70,7 @@ export default function Home() {
             <div className="w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] lg:w-[34rem] lg:h-[34rem] xl:w-[40rem] xl:h-[40rem] flex items-center justify-center overflow-hidden relative bg-transparent">
               <img
                 src="/images/logos/challenge-home.png"
-                alt="Clutch 2026"
+                alt="Challenge 2026"
                 className="h-full w-full object-contain"
               />
             </div>
