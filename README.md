@@ -19,7 +19,7 @@ Visit our website: [https://site.neu-aquacore.workers.dev](https://site.neu-aqua
 - **Smooth Animations** - GSAP-powered scroll animations and transitions
 - **Performance Optimized** - Adaptive rendering based on device capability with progressive enhancement
 - **Team Blog** - Technical articles and project updates from team members
-- **Competition Archives** - Detailed records of SAUVC, RoboSub, and other competition participations
+- **Competition Archives** - Detailed records of URPC, RoboCup, and other competition participations
 
 ---
 
