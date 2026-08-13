@@ -268,7 +268,7 @@ const teamData = {
       {
         name: "GUO Hongyuan",
         role: "CEO",
-        image: "/website_member_photos/hongyuan-2.jpg",
+        image: "/website_member_photos/hongyuan-1.jpg",
         backImage: "/website_member_photos/hongyuan-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
         //linkedin: "https://www.linkedin.com/in/lim-han-zhou-arthur-94215115a/"
