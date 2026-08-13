@@ -91,4 +91,5 @@ This project is developed by the AquaCore team at Northeastern University.
 AquaCore is a student team from Northeastern University, founded in 2020. We bring together skills in mechanics, electronics, programming, and systems engineering to build underwater robots.
 
 **Website**: [https://site.neu-aquacore.workers.dev](https://site.neu-aquacore.workers.dev)
+
 **GitHub**: [https://github.com/NEU-AquaCore](https://github.com/NEU-AquaCore)
