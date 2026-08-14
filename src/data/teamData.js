@@ -362,11 +362,11 @@ const teamData = {
         {
         name: "XU Yibo",
         role: "Software Division",
-        image: "/website_member_photos/yibo-2.jpeg",
-        backImage: "/website_member_photos/yibo-1.webp",
+        image: "/website_member_photos/yibo-1.jpg",
+        backImage: "/website_member_photos/yibo-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
         //linkedin: "https://www.linkedin.com/in/wongweiming/",
-        //github: "https://github.com/Alvin0523",  
+        github: "https://github.com/g-n-mkbk",  
 
       },
       {
@@ -442,7 +442,7 @@ const teamData = {
         backImage: "/website_member_photos/yizhou-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
         //linkedin: "https://www.linkedin.com/in/tanzixuantzx",
-        //github: "https://github.com/zixuantannn",
+        github: "https://github.com/HelloEaJoe",
       },
       ],
       drone : [
