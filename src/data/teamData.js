@@ -441,7 +441,6 @@ const teamData = {
         image: "/website_member_photos/yizhou-1.jpg",
         backImage: "/website_member_photos/yizhou-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
-        //linkedin: "https://www.linkedin.com/in/tanzixuantzx",
         github: "https://github.com/HelloEaJoe",
       },
       ],
@@ -452,7 +451,6 @@ const teamData = {
         image: "/website_member_photos/donghui-1.jpg",
         backImage: "/website_member_photos/donghui-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
-        //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
         github: "https://github.com/david312213",  
       },
       {
@@ -461,8 +459,6 @@ const teamData = {
         image: "/website_member_photos/kangyi-1.jpg",
         backImage: "/website_member_photos/kangyi-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
-        //linkedin: "https://www.linkedin.com/in/ray-shao/",
-        //github: "https://github.com/frieddeli",
 
       },
           {
@@ -471,8 +467,6 @@ const teamData = {
         image: "/website_member_photos/fangming-1.jpg",
         backImage: "/website_member_photos/fangming-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
-        //linkedin: "https://www.linkedin.com/in/cheng-jing-hao-74715a30a/",
-        //github: "https://github.com/hchengjing",
       },
       {
         name: "WANG Yousheng",
@@ -480,8 +474,6 @@ const teamData = {
         image: "/website_member_photos/yousheng-1.jpg",
         backImage: "/website_member_photos/yousheng-2.jpg",
         schoolYear: "Year 2 Robotics Engineering Student",
-        //linkedin: "https://www.linkedin.com/in/scott-cheng-802138154/",
-        //github: "https://github.com/scott-cjx",  
       },
       ],
       advisors: [
@@ -515,6 +507,20 @@ const teamData = {
         backImage: "/website_member_photos/shuai-2.jpg",
         schoolYear: "Laboratory Technician, Faculty of Robot Science and Engineering",
         //linkedin: "https://www.linkedin.com/in/wai-lee-chan-3b853595/?originalSubdomain=sg",
+      },
+      {
+        name: "GAO Qiang",
+        role: "Team Advisor",
+        image: "/website_member_photos/qiang-1.jpg",
+        backImage: "/website_member_photos/qiang-2.jpg",
+        schoolYear: "PhD Student, Faculty of Robot Science and Engineering",
+      },
+      {
+        name: "LIU Le",
+        role: "Team Advisor",
+        image: "/website_member_photos/le-1.jpg",
+        backImage: "/website_member_photos/le-2.jpg",
+        schoolYear: "Master's Student, Faculty of Robot Science and Engineering",
       },
       ]
   }
