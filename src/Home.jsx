@@ -46,7 +46,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center justify-center space-y-6 w-full text-center order-1 lg:order-2">
-            <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue-500">Meet Clutch & other vehicles</div>
+            <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue-500">Meet Clutch & Challenge</div>
             <div className="text-2xl sm:text-3xl md:text-2xl font-medium text-white">Vehicles for RoboCup 2026</div>
 
 
