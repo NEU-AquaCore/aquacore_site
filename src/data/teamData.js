@@ -21,7 +21,7 @@ const teamData = {
       },
       {
         name: "WANG Xin",
-        role: "Hardware Lead",
+        role: "Mechanical Lead",
         image: "/website_member_photos/xin-1.jpg",
         backImage: "/website_member_photos/xin-2.jpg",
         schoolYear: "Year 3 Biological Sciences Student",
@@ -132,7 +132,7 @@ const teamData = {
 
       },
     ],
-    hardware: [
+    mechanical: [
       {
         name: "JIANG Huaiyu",
         role: "CEO, Team Lead",
@@ -143,7 +143,7 @@ const teamData = {
       },
       {
         name: "HUANG Kangyi",
-        role: "CFO",
+        role: "Mechanical Member",
         image: "/website_member_photos/kangyi-1.jpg",
         backImage: "/website_member_photos/kangyi-2.jpg",
         schoolYear: "Year 2 Robotics Engineering Student",
