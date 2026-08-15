@@ -171,9 +171,9 @@ const teamData = {
       },
       {
         name: "WANG Yizhou",
-        role: "Software Advisor",
-        image: "/website_member_photos/yizhou-2.jpg",
-        backImage: "/website_member_photos/yizhou-1.jpg",
+        role: "Software Member",
+        image: "/website_member_photos/yizhou-1.jpg",
+        backImage: "/website_member_photos/yizhou-2.jpg",
         schoolYear: "Year 2 Robotics Engineering Student",
         //linkedin: "https://www.linkedin.com/in/toh-jia-hao-65bb39229/",
         //github: "https://github.com/Evintjh",
