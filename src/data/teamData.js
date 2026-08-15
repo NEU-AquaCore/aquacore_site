@@ -380,10 +380,10 @@ const teamData = {
 
       },
       ], 
-      electrical : [
+      hardware : [
         {
         name: "WANG Yizhou",
-        role: "CRO, Electrical Lead",
+        role: "CRO, Hardware Lead",
         image: "/website_member_photos/yizhou-1.jpg",
         backImage: "/website_member_photos/yizhou-2.jpg",
         schoolYear: "Year 3 Robotics Engineering Student",
@@ -392,7 +392,7 @@ const teamData = {
       },
       {
         name: "HAO Siyu",
-        role: "Electrical Member",
+        role: "Hardware Member",
         image: "/website_member_photos/siyu-1.jpg",
         backImage: "/website_member_photos/siyu-2.jpg",
         schoolYear: "Year 2 Robotics Engineering Student",
@@ -401,7 +401,7 @@ const teamData = {
       },
       {
         name: "WU Jiawang",
-        role: "Electrical Member",
+        role: "Hardware Member",
         image: "/website_member_photos/jiawang-1.jpg",
         backImage: "/website_member_photos/jiawang-2.jpg",
         schoolYear: "Year 2 Robotics Engineering Student",
