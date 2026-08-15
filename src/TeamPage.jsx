@@ -427,7 +427,7 @@ function TeamSubmenu({ year }) {
   } else if (year === "AY25/26") {
     teams = [
       { id: "leads", label: "Leads" },
-      { id: "hardware", label: "Hardware" },
+      { id: "mechanical", label: "Mechanical" },
       { id: "software", label: "Software" },
       { id: "electrical", label: "Electrical" },
       { id: "business", label: "Business" },
@@ -478,7 +478,7 @@ const teamDescriptions = {
     },
       'AY25/26': {
         leads: "Steering the team’s vision, strategy, and cross-functional coordination to drive AquaCore forward.",
-        hardware: "Designing and building the mechanical systems that bring our autonomous vehicles to life.",
+        mechanical: "Designing and building the mechanical systems that bring our autonomous vehicles to life.",
         software: "Developing the brains behind our AUVs — from navigation algorithms to computer vision and control systems.",
         electrical: "Engineering the power, circuits, and embedded systems that keep our vehicles running reliably underwater.",
         business: "Managing sponsorships, partnerships, outreach, and branding to sustain and grow Team AquaCore.",
