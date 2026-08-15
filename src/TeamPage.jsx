@@ -438,7 +438,7 @@ function TeamSubmenu({ year }) {
       { id: "leads", label: "Leads" },
       { id: "mechanical", label: "Mechanical" },
       { id: "software", label: "Software" },
-      { id: "electrical", label: "Electrical" },
+      { id: "hardware", label: "Hardware" },
       { id: "business", label: "Business" },
       { id: "webdev", label: "Web Dev" }, 
       { id: "drone", label: "Drone" },
@@ -465,7 +465,7 @@ const teamDescriptions = {
         "Designing and building the mechanical systems that bring our autonomous vehicles to life.",
       software:
         "Developing the brains behind our AUVs — from navigation algorithms to computer vision and control systems.",
-      electrical:
+      hardware:
         "Engineering the power, circuits, and embedded systems that keep our vehicles running reliably underwater.",
       business:
         "Managing sponsorships, partnerships, outreach, and branding to sustain and grow Team AquaCore.",
