@@ -187,24 +187,13 @@ const sponsorProfiles = {
       'AquaCore is supported by NEU AMSIL.'
     ]
   },
-  cxzx: {
-    name: 'NEU Innovation Center',
-    logo: '/images/logos/neu_cxzx_logo.png',
-    logoClass: 'max-h-56 max-w-full object-contain',
-    bg: '#ffffff',
-    text: 'text-black',
-    imageClass: 'max-w-2xl object-contain',
-    description: [
-      'AquaCore is supported by NEU Innovation Center.'
-    ]
-  },
 };
 
 const sponsorYears = {
   2026: {
     tierImage: '/images/logos/zanque.png',
     sponsors: ['fstd', 'smf', 'dso', 'vectornav', 'waterlinked', 'espressif', 'zen4blue', 'aquarian', 'dwe'],
-    supporters: ['rse', 'amsil', 'cxzx'/*, 'jdf'*/]
+    supporters: ['rse', 'amsil'/*, 'jdf'*/]
   },
   2025: {
     tierImage: '/images/tiered-sponsors-2025.png',
