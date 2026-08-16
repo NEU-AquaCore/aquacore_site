@@ -379,6 +379,22 @@ const teamData = {
         //github: "https://github.com/Alvin0523",  
 
       },
+      {
+        name: "ZHU Luoyi",
+        role: "Software Member",
+        image: "/website_member_photos/luoyi-1.jpg",
+        backImage: "/website_member_photos/luoyi-2.jpg",
+        schoolYear: "Year 2 Robotics Engineering Student",
+        //github: "https://github.com/Alvin0523",
+      },
+      {
+        name: "GONG Cheng",
+        role: "Software Member",
+        image: "/website_member_photos/cheng-1.jpg",
+        backImage: "/website_member_photos/cheng-2.jpg",
+        schoolYear: "Year 2 Robotics Engineering Student",
+        //github: "https://github.com/Alvin0523",
+      },
       ], 
       hardware : [
         {
