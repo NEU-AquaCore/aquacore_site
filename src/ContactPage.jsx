@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { FaEnvelope, FaMapPin } from 'react-icons/fa';
 import ContactForm from './ContactForm';
+import { useElementActivity } from './hooks/useElementActivity';
 import { Link } from 'react-router-dom';
 
 export default function ContactPage() {
@@ -97,6 +98,7 @@ export default function ContactPage() {
 }
 
 function ImageCarousel() {
+  const { ref, isActive } = useElementActivity();
   const images = [
     // '/images/contactus_2.webp',
     // '/images/contactus_1.webp',
@@ -111,16 +113,17 @@ function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    if (!isActive) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, isActive]);
 
   return (
-    <div className="relative w-full max-w-xl h-[400px] rounded-xl overflow-hidden mx-auto">
-      <img
+    <div ref={ref} className="relative w-full max-w-xl h-[400px] rounded-xl overflow-hidden mx-auto">
+      <img loading="lazy" decoding="async"
         src={images[currentIndex]}
         alt=""
         className="object-cover w-full h-full transition-opacity duration-500 ease-in-out"

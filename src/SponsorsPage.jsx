@@ -295,7 +295,7 @@ export default function SponsorsPage() {
             </div>
 
             {yearData.tierImage && (
-              <img
+              <img loading="lazy" decoding="async"
                 src={yearData.tierImage}
                 alt={`${activeYear} sponsors by tier`}
                 className="w-full object-contain rounded-lg bg-white/60 shadow-lg"
@@ -403,7 +403,7 @@ function SupportersCard({ supporterIds }) {
         <div className="flex flex-wrap items-center justify-center gap-4">
           {supporters.map((supporter) => (
             <div key={supporter.name} className="flex min-h-[150px] w-full max-w-xs items-center justify-center sm:w-72">
-              <img
+              <img loading="lazy" decoding="async"
                 src={supporter.logo}
                 alt={`${supporter.name} logo`}
                 className={supporter.logoClass ?? defaultLogoClass}
@@ -450,7 +450,7 @@ function PartnerCard({ id, partner, isOpen, onToggle, showTier = false }) {
         </div>
 
         <div className="flex min-h-[120px] items-center justify-center mb-6">
-          <img
+          <img loading="lazy" decoding="async"
             src={partner.logo}
             alt={`${partner.name} logo`}
             className={partner.logoClass ?? defaultLogoClass}

@@ -1,8 +1,7 @@
-import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function ChallengeOptimized({ scale = [0.007, 0.007, 0.007], ...props }) {
-  const { scene } = useGLTF('/challenge.glb', '/draco/');
+  const { scene } = useGLTF('/models/challenge-draco.glb', '/draco/');
   
   return (
     <primitive 
@@ -12,5 +11,3 @@ export function ChallengeOptimized({ scale = [0.007, 0.007, 0.007], ...props }) 
     />
   );
 }
-
-useGLTF.preload('/challenge.glb', '/draco/');

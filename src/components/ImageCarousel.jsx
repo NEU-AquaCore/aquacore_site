@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useElementActivity } from '../hooks/useElementActivity';
 
 function isVideoMedia(media) {
   return media.type === "video" || /\.(mp4|webm|ogg)$/i.test(media.src);
@@ -10,27 +11,28 @@ export default function ImageCarousel({
   onMediaClick,
 }) {
   const [idx, setIdx] = useState(0);
+  const { ref, isActive } = useElementActivity();
   const slides = images.map((image) => (
     typeof image === "string" ? { src: image } : image
   ));
 
   useEffect(() => {
     // Prevent interval if there are no images or only 1 image
-    if (slides.length <= 1) return;
+    if (slides.length <= 1 || !isActive) return;
 
     const interval = setInterval(() => {
       setIdx((prev) => (prev + 1) % slides.length);
     }, autoPlay);
 
     return () => clearInterval(interval);
-  }, [slides.length, autoPlay]);
+  }, [slides.length, autoPlay, isActive]);
 
   if (!slides.length) return null;
 
   const slide = slides[idx];
 
   return (
-    <div className="w-full max-w-lg overflow-hidden rounded-xl border border-white/15 bg-black/30">
+    <div ref={ref} className="w-full max-w-lg overflow-hidden rounded-xl border border-white/15 bg-black/30">
       {/* Current Image */}
       <div className="relative aspect-video bg-black/30">
         <button
@@ -45,11 +47,14 @@ export default function ImageCarousel({
               className="w-full h-full object-contain"
               muted
               playsInline
+              preload="none"
             />
           ) : (
             <img
               src={slide.src}
               alt={slide.alt ?? `Slide ${idx + 1}`}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-contain"
             />
           )}

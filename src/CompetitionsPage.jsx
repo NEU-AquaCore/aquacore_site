@@ -122,7 +122,7 @@ export default function CompetitionsPage() {
 
                   {/* Competition Image */}
                   <div className="relative h-auto bg-gray-700">
-                    <img 
+                    <img loading="lazy" decoding="async"
                       src={competition.image} 
                       alt={competition.title}
                       className="w-full h-full object-cover"

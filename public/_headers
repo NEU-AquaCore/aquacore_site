@@ -1,0 +1,13 @@
+# Only content-hashed build assets can be cached indefinitely.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Public model URLs stay stable, so allow regular revalidation.
+/models/*
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/draco/*
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/favicon.png
+  Cache-Control: public, max-age=86400, must-revalidate

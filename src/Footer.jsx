@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 import { FaInstagram, FaLinkedinIn, FaGithub, FaEnvelope, FaWeibo } from 'react-icons/fa';
 import { FaBilibili } from 'react-icons/fa6';
-import aquacoreLogo from './assets/logos/aquacoreWheelLogo.png';
+import aquacoreLogo from './assets/logos/aquacoreWheelLogo.webp';
 
 export default function Footer() {
   const [mailMenuOpen, setMailMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         {/* Logo */}
         <div className="flex items-center justify-center mb-6">
-          <img src={aquacoreLogo} alt="AquaCore Logo" className="h-14 w-auto object-contain" />
+          <img src={aquacoreLogo} alt="AquaCore Logo" width="900" height="900" className="h-14 w-auto object-contain" loading="lazy" decoding="async" />
         </div>
 
         <p>

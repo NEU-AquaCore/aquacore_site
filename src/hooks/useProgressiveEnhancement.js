@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export const useProgressiveEnhancement = () => {
-  const [capability, setCapability] = useState('basic');
+  const [capability, setCapability] = useState('medium');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ export const useProgressiveEnhancement = () => {
       try {
         // Check WebGL support
         const canvas = document.createElement('canvas');
-        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        const gl = canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
         
         if (!gl) {
           setCapability('fallback');
@@ -24,7 +24,6 @@ export const useProgressiveEnhancement = () => {
         const cores = navigator.hardwareConcurrency || 4;
         const userAgent = navigator.userAgent.toLowerCase();
         const isIOS = /iphone|ipad|ipod/.test(userAgent);
-        const isAndroid = /android/.test(userAgent);
 
         // Calculate device score
         let deviceScore = 0;
@@ -56,7 +55,8 @@ export const useProgressiveEnhancement = () => {
           setCapability('fallback');
         }
 
-        console.log(`Device capability: ${capability} (score: ${deviceScore})`);
+        // Release the probe context before the actual viewer creates one.
+        gl.getExtension('WEBGL_lose_context')?.loseContext();
         setIsLoading(false);
       } catch (error) {
         console.error('Error checking device capability:', error);

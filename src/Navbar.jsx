@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import aquacoreLogo from './assets/logos/aquacoreLogo.png';
+import aquacoreLogo from './assets/logos/aquacoreLogo.webp';
 
 const sections = [
   { id: 'team', label: 'Our Team', path: '/team' },
@@ -73,7 +73,7 @@ export default function Navbar({ scrollToSection }) {
       }
       lastScrollY.current = currentY;
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -126,7 +126,7 @@ export default function Navbar({ scrollToSection }) {
     >
       <div className="flex items-center h-8">
         <Link to="/" className="cursor-pointer hover:opacity-80 transition-opacity duration-200">
-        <img src={aquacoreLogo} alt="AquaCore Logo" className="h-8 w-auto object-contain" />
+        <img src={aquacoreLogo} alt="AquaCore Logo" width="1857" height="458" style={{ aspectRatio: '1857 / 458' }} className="h-8 w-auto object-contain" decoding="async" />
         </Link>
       </div>
 

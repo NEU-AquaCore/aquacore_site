@@ -48,7 +48,7 @@ export default function ResearchPage() {
           >
             {/* Image */}
             <div className="relative h-64 bg-gray-700">
-              <img
+              <img loading="lazy" decoding="async"
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover"

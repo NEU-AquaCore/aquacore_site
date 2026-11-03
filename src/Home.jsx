@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import ImageCarousel from "./components/ImageCarousel"; //import two carousels for the different sections
 import ContentCarousel from "./components/ContentCarousel";
+import { useElementActivity } from './hooks/useElementActivity';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -40,6 +41,8 @@ export default function Home() {
               <img
                 src="/images/logos/clutch-home.png"
                 alt="Clutch 2026"
+                fetchPriority="high"
+                decoding="async"
                 className="h-full w-full object-contain"
               />
             </div>
@@ -71,6 +74,7 @@ export default function Home() {
               <img
                 src="/images/logos/challenge-home.png"
                 alt="Challenge 2026"
+                decoding="async"
                 className="h-full w-full object-contain"
               />
             </div>
@@ -241,6 +245,7 @@ export default function Home() {
 
 
 function SponsorsCarousel() {
+  const { ref: activityRef, isActive } = useElementActivity();
   const sponsors = useMemo(() => [
     //{ logo: "/images/logos/fstd_logo.webp", alt: "FSTD", logoClass: "max-h-16 max-w-44" },
     { logo: "/images/logos/zanque.png", alt: "Zanque", logoClass: "max-h-16 max-w-44" },
@@ -306,7 +311,7 @@ function SponsorsCarousel() {
   const doubled = useMemo(() => [...sponsors, ...sponsors], [sponsors]);
 
   return (
-    <div className="w-full overflow-hidden py-6">
+    <div ref={activityRef} className="w-full overflow-hidden py-6">
       <div
         className="relative overflow-hidden"
         onMouseEnter={() => setIsPaused(true)}
@@ -322,7 +327,7 @@ function SponsorsCarousel() {
           className={"flex gap-8 w-max will-change-transform animate-marquee"}
           style={{
             animationDuration: `${Math.max(width / 80, 20)}s`,
-            animationPlayState: isPaused ? 'paused' : 'running',  /* 关键修改 */
+            animationPlayState: isPaused || !isActive ? 'paused' : 'running',
           }}
         >
           {doubled.map((s, i) => (
@@ -338,6 +343,8 @@ function SponsorsCarousel() {
                 <img
                   src={s.logo}
                   alt={s.alt}
+                  loading="lazy"
+                  decoding="async"
                   className={`${s.logoClass} h-auto w-auto object-contain transition duration-300 mx-auto`}
                   draggable={false}
                 />

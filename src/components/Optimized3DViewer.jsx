@@ -1,32 +1,42 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Suspense, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { useProgressiveEnhancement } from '../hooks/useProgressiveEnhancement';
-import { useAdaptiveFrameRate } from '../hooks/useAdaptiveFrameRate';
 import { getOptimizedGLConfig, getOptimizedDPR, getOptimizedShadows } from '../utils/webglConfig';
-import { TouchOrbitControls } from './TouchOrbitControls';
 import { AdaptiveModel } from './AdaptiveModel';
 import { StaticImageViewer } from './StaticImageViewer';
 import ErrorBoundary from '../ErrorBoundary';
 import Spinner from '../Spinner';
 
+function ResponsiveOrbitControls({ active, enableDamping }) {
+  const controls = useRef(null);
+  // Preserve the same damping duration even when a device renders fewer frames.
+  useFrame((_, delta) => {
+    if (controls.current && enableDamping) {
+      controls.current.dampingFactor = 1 - Math.pow(0.95, Math.min(delta, 0.25) * 60);
+    }
+  }, -2);
+
+  return <OrbitControls ref={controls} enabled={active} enableZoom={false} enablePan={true} enableDamping={enableDamping} />;
+}
+
 export function Optimized3DViewer({ 
-  showModel = true, 
+  active = true,
   scale = [5, 5, 5],
-  enableTouchControls = true,
   modelType = 'kevin',
   modelRotation = [0, 0, 0]
 }) {
   const { capability, isLoading } = useProgressiveEnhancement();
-  const { targetFPS } = useAdaptiveFrameRate(capability);
   
   const glConfig = getOptimizedGLConfig(capability);
   const dpr = getOptimizedDPR(capability);
   const shadows = getOptimizedShadows(capability);
 
-  // Show fallback for very low-end devices
+  // Avoid creating a renderer before the device check has finished.
+  if (isLoading) return null;
+
   if (capability === 'fallback') {
-    return <StaticImageViewer />;
+    return <StaticImageViewer modelType={modelType} />;
   }
 
   return (
@@ -39,12 +49,10 @@ export function Optimized3DViewer({
         style={{ background: 'transparent' }}
         gl={{
           ...glConfig,
-          // Cap pixel ratio for mobile performance
-          pixelRatio: Math.min(window.devicePixelRatio, 1.5)
         }}
         dpr={dpr}
         shadows={shadows}
-        frameloop="demand" // Only render when needed
+        frameloop={active ? 'demand' : 'never'}
       >
         {/* Show loading state inside Canvas */}
         {isLoading ? (
@@ -81,16 +89,7 @@ export function Optimized3DViewer({
           />
 
           {/* Adaptive Controls */}
-          {enableTouchControls && capability === 'mobile' ? (
-            <TouchOrbitControls enableZoom={false} enablePan={true} />
-          ) : (
-            <OrbitControls 
-              enableZoom={false} 
-              enablePan={true}
-              enableDamping={capability !== 'mobile'} // Disable damping on mobile for performance
-              dampingFactor={0.05}
-            />
-          )}
+          <ResponsiveOrbitControls active={active} enableDamping={capability !== 'mobile'} />
         </Suspense>
         )}
       </Canvas>

@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useElementActivity } from './hooks/useElementActivity';
 
 export default function OutreachPage() {
   const sectionRefs = {
@@ -81,7 +82,7 @@ export default function OutreachPage() {
 
           {/* Right: Video */}
           <div className="flex-1 flex justify-center items-center py-8 max-w-xl w-full">
-            <video
+            <video preload="metadata"
               src="/images/eresource_video.mp4"
               controls
               className="rounded-xl w-full h-auto max-h-[600px] object-cover"
@@ -119,21 +120,23 @@ function WorkshopsCarousel() {
     }, ];
 
     const [idx, setIdx] = useState(0);
+    const { ref, isActive } = useElementActivity();
 
   // Autoplay every 5 seconds
   useEffect(() => {
+    if (!isActive) return;
     const interval = setInterval(() => {
       setIdx((prev) => (prev + 1) % slides.length);
     }, 5000); // 5 seconds
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [slides.length, isActive]);
 
   return (
-    <div className="relative w-full max-w-5xl h-full flex flex-col items-center justify-center">
+    <div ref={ref} className="relative w-full max-w-5xl h-full flex flex-col items-center justify-center">
       {/* Slide content */}
       <div className="flex flex-col md:flex-row bg-[#232323] rounded-xl overflow-hidden shadow-lg">
         {/* Left: Image */}
-        <img
+        <img loading="lazy" decoding="async"
           src={slides[idx].image}
           alt={slides[idx].subtitle}
           className="w-full md:w-1/2 h-80 md:h-auto object-cover"
@@ -171,6 +174,7 @@ function WorkshopsCarousel() {
 }
 
 function VolunteerCarousel() {
+  const { ref, isActive } = useElementActivity();
   const images = [
     '/images/volunteer-1.JPG',
     '/images/volunteer-2.JPG',
@@ -180,16 +184,17 @@ function VolunteerCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    if (!isActive) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, isActive]);
 
   return (
-    <div className="relative w-full max-w-xl h-[400px] rounded-xl overflow-hidden mx-auto">
-      <img
+    <div ref={ref} className="relative w-full max-w-xl h-[400px] rounded-xl overflow-hidden mx-auto">
+      <img loading="lazy" decoding="async"
         src={images[currentIndex]}
         alt=""
         className="object-cover w-full h-full transition-opacity duration-500 ease-in-out"

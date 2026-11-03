@@ -1,40 +1,22 @@
-import { StrictMode } from 'react'
+import { lazy, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Home from './Home.jsx'
-import KevinPage from './KevinPage.jsx'
-import HydraPage from './HydraPage.jsx'
-import ClutchPage from './ClutchPage.jsx'
-import ChallengePage from './ChallengePage.jsx'
-import KrakenPage from './KrakenPage.jsx';
-import TeamPage from './TeamPage.jsx'
-import VehiclesPage from './VehiclesPage.jsx'
-import CompetitionsPage from './CompetitionsPage.jsx'
-import ResearchPage from './ResearchPage.jsx'
-import OutreachPage from './OutreachPage.jsx'
-import SponsorsPage from './SponsorsPage.jsx'
-import ContactPage from './ContactPage.jsx'
-import LucyPage from './LucyPage.jsx';
-// import FocusPage from './FocusPage.jsx';
-import Robosub2025Page from './Robosub2025Page.jsx';
-import Robosub2026Page from './Robosub2026Page.jsx';
-import RoboSub2026SubsystemPage from './RoboSub2026SubsystemPage.jsx';
-import Sauvc2025Page from './Sauvc2025Page.jsx';
-import Sauvc2026Page from './Sauvc2026Page.jsx';
-import Materov2024Page from './Materov2024Page.jsx';
-import Sauvc2024Page from './Sauvc2024Page.jsx';
-import Pen3DPage from './Pen3DPage.jsx';
-import YYSSPage from './YYSSPage.jsx';
-import MarineVehiclePage from './MarineVehiclePage.jsx';
-import ComputerVisionPage from './ComputerVisionPage.jsx';
-import Blender3DPage from './Blender3DPage.jsx';
-import JoinUsPage from './JoinUsPage.jsx';
-import GamePage from './GamePage.jsx';
-import TeamBlogPage from './TeamBlogPage.jsx';
-import TeamBlogPostPage from './TeamBlogPostPage.jsx';
 import { ToastContainer } from 'react-toastify';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+const ClutchPage = lazy(() => import('./ClutchPage.jsx'));
+const ChallengePage = lazy(() => import('./ChallengePage.jsx'));
+const TeamPage = lazy(() => import('./TeamPage.jsx'));
+const VehiclesPage = lazy(() => import('./VehiclesPage.jsx'));
+const CompetitionsPage = lazy(() => import('./CompetitionsPage.jsx'));
+const ResearchPage = lazy(() => import('./ResearchPage.jsx'));
+const OutreachPage = lazy(() => import('./OutreachPage.jsx'));
+const SponsorsPage = lazy(() => import('./SponsorsPage.jsx'));
+const ContactPage = lazy(() => import('./ContactPage.jsx'));
+const JoinUsPage = lazy(() => import('./JoinUsPage.jsx'));
+const GamePage = lazy(() => import('./GamePage.jsx'));
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

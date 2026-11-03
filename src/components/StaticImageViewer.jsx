@@ -1,14 +1,11 @@
-import React from 'react';
-import { Html } from '@react-three/drei';
-
-export function StaticImageViewer() {
+export function StaticImageViewer({ modelType = 'clutch' }) {
   return (
-    <Html center>
+    <div className="w-full h-full flex items-center justify-center">
       <img 
-        src="/images/kevin_placeholder.png" 
-        alt="Kevin - Static View" 
+        src={modelType === 'challenge' ? '/images/logos/challenge-home.png' : '/images/logos/clutch-home.png'}
+        alt={`${modelType} - Static View`}
         className="w-full h-full object-cover rounded-full"
       />
-    </Html>
+    </div>
   );
 } 

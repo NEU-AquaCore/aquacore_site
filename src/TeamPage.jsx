@@ -578,7 +578,7 @@ function TeamMemberCard({ member }) {
         {/* Front of card */}
         <div className="team-card-front ">
           <div className="w-full h-64 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-600">
-            <img 
+            <img loading="lazy" decoding="async"
               src={imgError ? '/api/placeholder/192/192' : image}
               alt={name} 
               className="w-full h-full object-cover"
@@ -600,7 +600,7 @@ function TeamMemberCard({ member }) {
         {/* Back of card */}
         <div className="team-card-back">
           <div className="w-full h-64 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-600">
-            <img 
+            <img loading="lazy" decoding="async"
               src={backImage || image} 
               alt={`${name} back`} 
               className="w-full h-full object-cover"

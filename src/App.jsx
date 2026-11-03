@@ -1,9 +1,8 @@
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 // import Toast from './Toast';
-import { SpeedInsights } from '@vercel/speed-insights/react'
 
 function ScrollToTop() {
   const { pathname, search } = useLocation();
@@ -20,10 +19,11 @@ function App() {
     <>
       <ScrollToTop />
       <Navbar />
-      <Outlet />
+      <Suspense fallback={<div className="min-h-screen bg-[#181818]" aria-busy="true" />}>
+        <Outlet />
+      </Suspense>
       <Footer />
       {/* <Toast /> */}
-      <SpeedInsights />
     </>
   );
 }

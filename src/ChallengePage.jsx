@@ -220,7 +220,7 @@ function ChallengePage() {
   };
 
   useEffect(() => {
-    gsap.timeline({
+    const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: mainRef.current,
         start: "top top",
@@ -261,6 +261,10 @@ function ChallengePage() {
         x: '-25vw',
         y: '600vh',
       })
+    return () => {
+      timeline.scrollTrigger?.kill();
+      timeline.kill();
+    };
   }, []);
 
   return (
@@ -303,7 +307,7 @@ function ChallengePage() {
         {/* 3D Scene */}
         <section className="relative grid place-items-center h-[100vh]">
           <div ref={sceneRef} className="h-[100vh] w-[100vw] text-white z-0">
-            <Canvas>
+            <Canvas frameloop="demand" dpr={[1, 1.5]}>
               <Scene progress={progress} modelType="challenge" />
             </Canvas>
           </div>

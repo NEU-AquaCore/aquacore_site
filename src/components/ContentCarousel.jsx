@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useElementActivity } from '../hooks/useElementActivity';
 
 export default function ContentCarousel({
   slides = [],
   autoPlay = 5000,
 }) {
   const [idx, setIdx] = useState(0);
+  const { ref, isActive } = useElementActivity();
 
   const prev = () => {
     setIdx((prev) => (prev - 1 + slides.length) % slides.length);
@@ -16,22 +18,27 @@ export default function ContentCarousel({
   };
 
   useEffect(() => {
+    if (slides.length <= 1 || !isActive) return;
     const interval = setInterval(() => {
       setIdx((prev) => (prev + 1) % slides.length);
     }, autoPlay);
 
     return () => clearInterval(interval);
-  }, [slides.length, autoPlay]);
+  }, [slides.length, autoPlay, isActive]);
 
   const slide = slides[idx];
+  if (!slide) return null;
 
   return (
-    <div className="relative w-full max-w-lg flex flex-col items-center">
+    <div ref={ref} className="relative w-full max-w-lg flex flex-col items-center">
 
       {/* IMAGE */}
       <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl">
         <img
           src={slide.image}
+          alt={slide.subtitle || slide.title || ''}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
