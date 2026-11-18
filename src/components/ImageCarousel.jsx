@@ -17,8 +17,7 @@ export default function ImageCarousel({
   ));
 
   useEffect(() => {
-    // Prevent interval if there are no images or only 1 image
-    if (slides.length <= 1 || !isActive) return;
+    if (autoPlay <= 0 || slides.length <= 1 || !isActive) return;
 
     const interval = setInterval(() => {
       setIdx((prev) => (prev + 1) % slides.length);
@@ -30,16 +29,20 @@ export default function ImageCarousel({
   if (!slides.length) return null;
 
   const slide = slides[idx];
+  const MediaContainer = onMediaClick ? "button" : "div";
+  const mediaButtonProps = onMediaClick ? {
+    type: "button",
+    onClick: () => onMediaClick(slide),
+    "aria-label": `Open slide ${idx + 1}`,
+  } : {};
 
   return (
     <div ref={ref} className="w-full max-w-lg overflow-hidden rounded-xl border border-white/15 bg-black/30">
       {/* Current Image */}
       <div className="relative aspect-video bg-black/30">
-        <button
-          type="button"
-          onClick={() => onMediaClick?.(slide)}
-          className={`absolute inset-0 w-full h-full ${onMediaClick ? "cursor-zoom-in" : "cursor-default"}`}
-          aria-label={`Open slide ${idx + 1}`}
+        <MediaContainer
+          {...mediaButtonProps}
+          className={`absolute inset-0 w-full h-full ${onMediaClick ? "cursor-zoom-in" : ""}`}
         >
           {isVideoMedia(slide) ? (
             <video
@@ -58,18 +61,20 @@ export default function ImageCarousel({
               className="w-full h-full object-contain"
             />
           )}
-        </button>
+        </MediaContainer>
 
         {slides.length > 1 && (
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
             {slides.map((_, i) => (
               <button
                 key={i}
+                type="button"
                 onClick={() => setIdx(i)}
                 className={`w-2.5 h-2.5 rounded-full transition-colors ${
                   i === idx ? "bg-blue-500" : "bg-white/60"
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
+                aria-current={i === idx ? "true" : undefined}
               />
             ))}
           </div>

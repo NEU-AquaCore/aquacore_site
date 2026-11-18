@@ -93,9 +93,9 @@ img { max-width: 100%; }
 .aqua-story-copy > p:not(.aqua-eyebrow) { color: #b4b4bc; font-size: 14px; line-height: 1.9; margin-top: 16px; max-width: 470px; }
 .aqua-story-copy > .aqua-text-link { margin-top: 24px; }
 .aqua-story-photo > div { border-radius: 6px; max-width: none; border-color: #3f3f46; }
-.aqua-story-photo .aspect-video { aspect-ratio: 1.4; }
 .aqua-story-photo .object-contain { object-fit: cover; }
-.aqua-photo-caption { display: block; margin-top: 12px; color: #a1a1aa; font-size: 12px; }
+.aqua-story-photo button { outline-offset: 3px; position: relative; }
+.aqua-story-photo button::before { content: ''; position: absolute; inset: -8px -4px; }
 .aqua-story-facts { display: flex; justify-content: space-between; gap: 15px; margin-top: 30px; padding-top: 22px; border-top: 1px solid #353535; }
 .aqua-story-facts strong { display: block; color: #f4f4f5; font-size: 23px; font-weight: 600; }
 .aqua-story-facts span { display: block; margin-top: 5px; font-size: 11px; color: #a1a1aa; }
@@ -264,7 +264,6 @@ img { max-width: 100%; }
   .aqua-story { grid-template-columns: 1fr; gap: 32px; }
   .aqua-story-copy > p:not(.aqua-eyebrow) { font-size: 14px; }
   .aqua-home h2 { font-size: 29px; }
-  .aqua-story-photo .aspect-video { aspect-ratio: 1.5; }
   .aqua-story-facts strong { font-size: 24px; }
   .aqua-section-heading { flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: 25px; }
   .aqua-section-aside br { display: none; }

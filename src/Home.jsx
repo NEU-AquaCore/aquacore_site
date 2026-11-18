@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FiArrowUpRight, FiArrowRight, FiCompass, FiCpu, FiRadio } from 'react-icons/fi';
 import ImageCarousel from './components/ImageCarousel';
+import { teamPhotos } from './data/teamPhotos';
 
 const vehicles = [
   { name: 'Clutch', image: '/images/logos/clutch-home.png', path: '/clutch', label: 'Precision through engineering.' },
@@ -39,7 +40,9 @@ export default function Home() {
 
       <section id="our-story" className="aqua-section aqua-container aqua-story">
         <div className="aqua-story-copy"><p className="aqua-eyebrow">About AquaCore</p><h2>Who we are</h2><p>Founded in 2020, AquaCore (海洋之心) is a student team from Northeastern University with a shared passion for underwater robotics.</p><p>We bring mechanics, electronics, and software together to solve real engineering challenges. We learn by doing, build as a team, and push each other to go further.</p><Link to="/team" className="aqua-text-link">The people behind the robots <FiArrowUpRight /></Link><div className="aqua-story-facts"><div><strong>2020</strong><span>Our story begins</span></div><div><strong>NEU</strong><span>Our home in Shenyang</span></div><div><strong>AUV</strong><span>Our shared passion</span></div></div></div>
-        <div className="aqua-story-photo"><ImageCarousel images={['/images/team-1.jpg', '/images/team-2.jpg', '/images/team-3.png']} /><span className="aqua-photo-caption">Different minds. One direction.</span></div>
+        <div className="aqua-story-photo">
+          <ImageCarousel images={teamPhotos} autoPlay={0} />
+        </div>
       </section>
 
       <section className="aqua-section aqua-section-tinted"><div className="aqua-container"><div className="aqua-section-heading"><div><p className="aqua-eyebrow">Our vehicles</p><h2>Meet our vehicles</h2></div><Link to="/vehicles" className="aqua-text-link">Explore all vehicles <FiArrowUpRight /></Link></div><div className="aqua-fleet-grid">{vehicles.map((vehicle) => <Link key={vehicle.name} to={vehicle.path} className="aqua-vehicle-card"><div className="aqua-card-topline"><span className="aqua-eyebrow">Autonomous underwater vehicle</span><span>2026</span></div><div className="aqua-vehicle-image"><img src={vehicle.image} alt={vehicle.name} loading="lazy" decoding="async" /></div><div className="aqua-vehicle-card-bottom"><div><h3>{vehicle.name} <span>2026</span></h3><p>{vehicle.label}</p></div><span className="aqua-circle-arrow"><FiArrowUpRight /></span></div></Link>)}</div></div></section>

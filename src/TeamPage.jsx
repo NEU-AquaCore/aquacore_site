@@ -2,6 +2,7 @@ import PageHeader from './components/PageHeader';
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import teamData from './data/teamData.js';
+import { labPhoto } from './data/teamPhotos';
 
 export default function TeamPage() {
   const [activeTab, setActiveTab] = useState('AY26/27');
@@ -19,6 +20,18 @@ export default function TeamPage() {
       <PageHeader eyebrow="AquaCore NEU" title="Meet Our Team" description="Mechanical design, electronics, control systems, and software. We bring different skills together to turn ideas into working underwater vehicles." image="/images/team-2.jpg" />
 
       <div className="w-full max-w-6xl px-4">
+        <figure className="mb-12">
+          <img
+            src={labPhoto.src}
+            alt={labPhoto.alt}
+            width={labPhoto.width}
+            height={labPhoto.height}
+            loading="lazy"
+            decoding="async"
+            className="block h-auto w-full rounded-md"
+          />
+          <figcaption className="mt-3 text-sm text-gray-300">{labPhoto.caption}</figcaption>
+        </figure>
         {/* Year Tabs - Mobile: Stack vertically, Desktop: Side by side */}
         <div className="flex flex-col md:flex-row justify-start items-start gap-4 md:gap-8">
           {/* Tab Container */}

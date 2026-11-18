@@ -1,5 +1,6 @@
 import PageHeader from './components/PageHeader';
 import { Link } from 'react-router-dom';
+import { fieldPhotos } from './data/teamPhotos';
 
 export default function CompetitionsPage() {
   const competitions = [
@@ -81,6 +82,30 @@ export default function CompetitionsPage() {
     <div className="aqua-legacy-page min-h-screen bg-[#181818] text-white">
       {/* Header */}
       <PageHeader eyebrow="AquaCore NEU" title="Competitions" description={"A glimpse of our journey through underwater robotics competitions. Each challenge is a chance to test our ideas, learn together, and build better."} image={"/images/awards.png"} />
+
+      <section aria-labelledby="competition-photos-heading">
+        <div className="mx-auto max-w-6xl px-4 py-10">
+          <h2 id="competition-photos-heading" className="mb-6 text-2xl sm:text-3xl">
+            Competition &amp; poolside photos
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {fieldPhotos.map((photo) => (
+              <figure key={photo.src}>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={photo.width}
+                  height={photo.height}
+                  loading="lazy"
+                  decoding="async"
+                  className="block h-auto w-full rounded-md"
+                />
+                <figcaption className="mt-3 text-sm text-gray-300">{photo.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <div className="flex w-full justify-center">
         <p className="text-gray-300 text-lg sm:text-xl pt-10 pb-10">
