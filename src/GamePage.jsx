@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar';
 
 export default function GamePage() {
   const [gameScale, setGameScale] = useState(0.65);
@@ -100,7 +99,6 @@ export default function GamePage() {
 
   return (
     <div className="min-h-screen bg-[#181818]">
-      <Navbar />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-8 md:px-20">

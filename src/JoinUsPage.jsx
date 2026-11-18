@@ -1,45 +1,11 @@
+import PageHeader from './components/PageHeader';
 import React from 'react';
 
 export default function JoinUsPage() {
   return (
-    <div className="min-h-screen bg-[#181818] text-white">
+    <div className="aqua-legacy-page min-h-screen bg-[#181818] text-white">
       {/* Hero Section */}
-      <section 
-        className="relative w-full min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-8 py-24 bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('/images/team-2x.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/80 z-0" />
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue-500 mb-6">
-            Join AquaCore
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-white mb-8">
-            Be part of the future of underwater robotics
-          </p>
-          <p className="text-base sm:text-lg text-white mb-12 max-w-2xl mx-auto">
-            We're looking for passionate students who want to push the boundaries of autonomous underwater vehicles. 
-            Join our multidisciplinary team and help us compete in international robotics competitions.
-          </p>
-          
-          {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="https://docs.qq.com/form/page/DTUZ4b2hpdE5SU1Bx" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-4 text-lg rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105"
-            >
-              Apply Now
-            </a>
-            <a 
-              href="/team" 
-              className="border border-gray-400 text-gray-200 font-semibold px-8 py-4 text-lg rounded-lg shadow transition-all duration-200 hover:bg-gray-700"
-            >
-              Meet Our Team
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHeader eyebrow="AquaCore NEU" title="Join AquaCore" description={"Bring your curiosity. Join a multidisciplinary team building the future of underwater robotics."} image={"/images/team-2x.jpg"}><div className="aqua-button-row"><a href="https://docs.qq.com/form/page/DTUZ4b2hpdE5SU1Bx" target="_blank" rel="noopener noreferrer" className="aqua-button">Apply now ↗</a><a href="/team" className="aqua-button aqua-button-outline">Meet our team →</a></div></PageHeader>
 
       {/* Why Join Section */}
       <section className="py-16 px-4 sm:px-8 md:px-20 bg-[#1a1a1a]">

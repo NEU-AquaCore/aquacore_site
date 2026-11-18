@@ -1,358 +1,54 @@
-import { useRef, useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
-import ImageCarousel from "./components/ImageCarousel"; //import two carousels for the different sections
-import ContentCarousel from "./components/ContentCarousel";
-import { useElementActivity } from './hooks/useElementActivity';
+import { FiArrowUpRight, FiArrowRight, FiCompass, FiCpu, FiRadio } from 'react-icons/fi';
+import ImageCarousel from './components/ImageCarousel';
 
-const sections = [
-  { id: 'home', label: 'Home' },
-  { id: 'services', label: 'Services' },
-  { id: 'about', label: 'About me' },
-  { id: 'portfolio', label: 'Portfolio' },
-  { id: 'contact', label: 'Contact me' },
+const vehicles = [
+  { name: 'Clutch', image: '/images/logos/clutch-home.png', path: '/clutch', label: 'Precision through engineering.' },
+  { name: 'Challenge', image: '/images/logos/challenge-home.png', path: '/challenge', label: 'Built for the next challenge.' },
+];
+const disciplines = [
+  { icon: FiCompass, title: 'Mechanical', text: 'From the first CAD sketch to a watertight frame. We design, build, test, and keep refining.' },
+  { icon: FiCpu, title: 'Electrical', text: 'Power, sensing, and control. The connected systems that bring our vehicles to life.' },
+  { icon: FiRadio, title: 'Software', text: 'Perception, navigation, and autonomy. Helping our robots make sense of the underwater world.' },
 ];
 
-
 export default function Home() {
-  // Refs for scrolling
-  const sectionRefs = {
-    home: useRef(null),
-    services: useRef(null),
-    about: useRef(null),
-    portfolio: useRef(null),
-    contact: useRef(null),
-    competitions: useRef(null),
-  };
-
-
-  const scrollToSection = (id) => {
-    sectionRefs[id]?.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <div className="min-h-screen bg-[#181818] text-white font-sans overflow-x-hidden">
-      <Navbar scrollToSection={scrollToSection} />
-      {/* Hero Section */}
-      <section ref={sectionRefs.home} className="pt-28 pb-10 md:pt-32 md:pb-16 px-4 sm:px-8 md:px-12 min-h-screen bg-[#181818] flex items-center">
-        <div className="w-full max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(19rem,0.9fr)_minmax(0,1fr)] items-center gap-4 md:gap-8">
-          <div className="flex items-center justify-center w-full order-2 lg:order-1">
-            <div className="w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] lg:w-[34rem] lg:h-[34rem] xl:w-[40rem] xl:h-[40rem] rounded-full flex items-center justify-center overflow-hidden relative bg-transparent">
-              <img
-                src="/images/logos/clutch-home.png"
-                alt="Clutch 2026"
-                fetchPriority="high"
-                decoding="async"
-                className="h-full w-full object-contain"
-              />
-            </div>
+    <div className="aqua-home">
+      <section className="aqua-hero">
+        <div className="aqua-container aqua-hero-layout">
+          <Link to="/clutch" className="aqua-hero-vehicle aqua-hero-vehicle-left" aria-label="Explore Clutch 2026">
+            <img src="/images/logos/clutch-home.png" alt="Clutch autonomous underwater vehicle" fetchPriority="high" decoding="async" />
+            <span>Clutch <small>2026</small></span>
+          </Link>
+          <div className="aqua-hero-copy">
+            <p className="aqua-eyebrow">Northeastern University · 海洋之心</p>
+            <h1>We are <br />NEU AquaCore</h1>
+            <p className="aqua-hero-subtitle">Vehicles for RoboCup 2026</p>
+            <p className="aqua-hero-description">A student team with a passion for underwater robotics. We learn by doing and build better together.</p>
+            <div className="aqua-button-row"><Link to="/vehicles" className="aqua-button">Meet our vehicles <FiArrowRight /></Link><Link to="/competitions" className="aqua-button aqua-button-outline">Competitions 2026</Link></div>
           </div>
-
-          <div className="flex flex-col items-center justify-center space-y-6 w-full text-center order-1 lg:order-2">
-            <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue-500">We are NEU AquaCore</div>
-            <div className="text-2xl sm:text-3xl md:text-2xl font-medium text-white">Vehicles for RoboCup 2026</div>
-
-
-            <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full justify-center">
-            <Link
-              to="/vehicles"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 sm:px-8 py-2 text-sm sm:text-base rounded-lg shadow transition-all duration-200 text-center"
-            >
-              Meet Our Vehicles
-            </Link>
-              <Link
-                to="/competitions"
-                className="border border-gray-400 text-gray-200 font-semibold px-4 sm:px-8 py-2 text-sm sm:text-base rounded-lg shadow transition-all duration-200 hover:bg-gray-700 text-center"
-              >
-              Competitions 2026
-              </Link>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center w-full order-3">
-            <div className="w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[24rem] lg:w-[34rem] lg:h-[34rem] xl:w-[40rem] xl:h-[40rem] flex items-center justify-center overflow-hidden relative bg-transparent">
-              <img
-                src="/images/logos/challenge-home.png"
-                alt="Challenge 2026"
-                decoding="async"
-                className="h-full w-full object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Placeholder sections for navigation */}
-      <section ref={sectionRefs.services} className="min-h-[500px] bg-[#222] py-16">
-        <div className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 sm:px-8 gap-8">
-        {/* Left: Text */}
-          <div className="flex-1 flex flex-col justify-center items-start py-8 w-full">
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-8">Who we are</h2>
-            <p className="text-base sm:text-lg text-white mb-6">
-            Founded in 2020, AquaCore (海洋之心) is a student team from Northeastern University, driven by a passion for underwater robotics. We specialize in developing autonomous underwater vehicles (AUVs), competing in marine robotics challenges, and advancing research in the field.
-          </p>
-            <p className="text-base sm:text-lg text-white mb-8">
-            We love building things that go underwater and solving the challenges that come with it. We bring together skills in mechanics, electronics, programming, and systems engineering. We learn by doing, and we push each other to do better.
-          </p>
-            <Link to="/team" className="text-base sm:text-lg font-semibold text-white hover:text-blue-500 transition flex items-center group">
-            Meet The Team <span className="ml-2 group-hover:translate-x-1 transition-transform">&raquo;</span>
+          <Link to="/challenge" className="aqua-hero-vehicle aqua-hero-vehicle-right" aria-label="Explore Challenge 2026">
+            <img src="/images/logos/challenge-home.png" alt="Challenge autonomous underwater vehicle" decoding="async" />
+            <span>Challenge <small>2026</small></span>
           </Link>
         </div>
-        {/* Team Carousel */}
-          <div className="flex-1 flex justify-center items-center py-8 w-full">
-          <ImageCarousel
-            images={[
-              '/images/team-1.jpg',
-              '/images/team-2.jpg',
-              '/images/team-3.png',
-              //'/images/team_1.jpg',
-              //'/images/team_2.webp',
-              //'/images/team_3.jpg',
-              //'/images/team_4.webp',
-              //'/images/team_5.jpg',
-            ]}
-            autoPlay={4000}
-          />
-          </div>
-        </div>
       </section>
 
-      <section ref={sectionRefs.competitions} className="min-h-[500px] bg-[#181818] py-16">
-        <div className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 sm:px-8 gap-8">
-          {/* Competitions Carousel */}
-          <div className="flex-1 flex justify-center items-center py-8 w-full">
-            <ContentCarousel
-              slides={[
-                {
-                  image: '/images/rstteam2025.jpg',
-                  title: 'Multiple Top Honors',
-                  subtitle: 'RST 2025',
-                  desc: 'AquaCore delivered outstanding results at RST 2025, securing multiple first-place awards and demonstrating strong system robustness.',
-                  //link: '/robosub2025',
-                },
-                {
-                  image: '/images/urpcteam2025.jpeg',
-                  title: '1st Place',
-                  subtitle: 'URPC 2025',
-                  desc: 'Following our successful debut last year, AquaCore proudly clinched 1st place at the URPC Competition 2025!',
-                  //link: '/urpc2025',
-                },
-                // {
-                //   image: '/images/materov2024.webp',
-                //   title: 'Finalist',
-                //   subtitle: 'MATE ROV 2024',
-                //   desc: 'Find out about how we conquered the MATE ROV World Championship with "Guts and Glory"!',
-                //   //link: '/materov2024',
-                // },
-                // {
-                //   image: '/images/sauvc2024.jpg',
-                //   title: '3rd Place',
-                //   subtitle: 'SAUVC 2024',
-                //   desc: 'Witness the debut of our first autonomous underwater vehicle (AUV) at the Singapore AUV Challenge.',
-                //   //link: '/sauvc2024',
-                // },
-              ]}
-              autoPlay={5000}
-            />
-          </div>
-        {/* Left: Text */}
-          <div className="flex-1 flex flex-col justify-center items-start py-8 w-full">
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-8">Competitions</h2>
-            <p className="text-base sm:text-lg text-white mb-6">
-            We are active in a wide range of national and international competitions, including URPC, RoboCup, RST, CIOURC, the National Marine Vehicle Design and Manufacturing Competition, and MATE ROV.
-          </p>
-            <p className="text-base sm:text-lg text-white mb-8">
-            These events push us to innovate, refine our underwater vehicle designs, and collaborate on cutting-edge robotics solutions.
-          </p>
-            <Link to="/competitions" className="text-base sm:text-lg font-semibold text-white hover:text-blue-500 transition flex items-center group">
-            Learn more about our participated competitions <span className="ml-2 group-hover:translate-x-1 transition-transform">&raquo;</span>
-          </Link>
-        </div>
+      <section className="aqua-partner-strip"><div className="aqua-container"><p className="aqua-eyebrow">Supported by<br /><strong>a shared vision</strong></p><img src="/images/logos/NEU.png" alt="Northeastern University" loading="lazy" /><img src="/images/logos/neu_rse_logo.jpg" alt="NEU Faculty of Robot Science and Engineering" loading="lazy" /><img src="/images/logos/neu_amsil_logo.png" alt="Aerial and Maritime Swarm Intelligence Laboratory" loading="lazy" /><Link to="/sponsors" className="aqua-text-link">Our sponsors <FiArrowUpRight /></Link></div></section>
 
-
-        </div>
+      <section id="our-story" className="aqua-section aqua-container aqua-story">
+        <div className="aqua-story-copy"><p className="aqua-eyebrow">About AquaCore</p><h2>Who we are</h2><p>Founded in 2020, AquaCore (海洋之心) is a student team from Northeastern University with a shared passion for underwater robotics.</p><p>We bring mechanics, electronics, and software together to solve real engineering challenges. We learn by doing, build as a team, and push each other to go further.</p><Link to="/team" className="aqua-text-link">The people behind the robots <FiArrowUpRight /></Link><div className="aqua-story-facts"><div><strong>2020</strong><span>Our story begins</span></div><div><strong>NEU</strong><span>Our home in Shenyang</span></div><div><strong>AUV</strong><span>Our shared passion</span></div></div></div>
+        <div className="aqua-story-photo"><ImageCarousel images={['/images/team-1.jpg', '/images/team-2.jpg', '/images/team-3.png']} /><span className="aqua-photo-caption">Different minds. One direction.</span></div>
       </section>
 
-      <section ref={sectionRefs.about} className="min-h-[500px] bg-[#222] py-16">
-        <div className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 sm:px-8 gap-8">
-          {/* Right: Text */}
-          <div className="flex-1 flex flex-col justify-center items-start py-8 w-full">
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-8">Our Initiatives</h2>
-            <p className="text-base sm:text-lg text-white mb-8">
-              We are always eager to share our work and our knowledge with the community through outreach workshops, to inspire a spirit of innovation in students. Through these workshops, we hope to spark students' interest in Marine Science & Tech; to evoke curiosity and inspire students to innovate new solutions as they explore the world beyond the school curriculum.
-          </p>
-            <Link to="/outreach" className="text-base sm:text-lg font-semibold text-white hover:text-blue-500 transition flex items-center group">
-            Click here to view our initiative efforts <span className="ml-2 group-hover:translate-x-1 transition-transform">&raquo;</span>
-          </Link>
-          </div>
-          {/* Initiatives Carousel */}
-          <div className="flex-1 flex justify-center items-center py-8 w-full">
-            <ContentCarousel
-              slides={[
-                {
-                  image: '/images/dronetalk_1.png',
-                  title: 'April 2026',
-                  subtitle: 'Drone Tech Talk & Demo',
-                  desc: 'AquaCore hosted an engaging session on drone technology, introducing participants to flight dynamics, control systems, and autonomous navigation through a live demonstration. The event offered a hands-on look at the possibilities of unmanned aerial vehicles.',
-                  //link: '/computervision',
-                },
-                {
-                  image: '/images/rovhandson_1.png',
-                  title: 'November 2025',
-                  subtitle: 'ROV Hands-On Workshop',
-                  desc: 'AquaCore hosted a hands-on ROV workshop where participants explored the fundamentals of underwater robotics — from buoyancy and thruster control to piloting a small ROV through an obstacle course and retrieving target objects.',
-                  //link: '/marinevehicle',
-                },
-                // {
-                //   image: '/images/blender3d_7.jpg',
-                //   title: 'October 2024',
-                //   subtitle: 'Blender 3D Workshop',
-                //   desc: 'Mecatron organized a 2 day Blender 3D workshop, providing NTU students with hands-on training in Blender basics and Rendering, Product Design Fundamentals, and Materials and Texturing.',
-                //   link: '/blender3d',
-                // },
-              ]}
-              autoPlay={6000}
-            />
-          </div>
-        </div>
-      </section>
+      <section className="aqua-section aqua-section-tinted"><div className="aqua-container"><div className="aqua-section-heading"><div><p className="aqua-eyebrow">Our vehicles</p><h2>Meet our vehicles</h2></div><Link to="/vehicles" className="aqua-text-link">Explore all vehicles <FiArrowUpRight /></Link></div><div className="aqua-fleet-grid">{vehicles.map((vehicle) => <Link key={vehicle.name} to={vehicle.path} className="aqua-vehicle-card"><div className="aqua-card-topline"><span className="aqua-eyebrow">Autonomous underwater vehicle</span><span>2026</span></div><div className="aqua-vehicle-image"><img src={vehicle.image} alt={vehicle.name} loading="lazy" decoding="async" /></div><div className="aqua-vehicle-card-bottom"><div><h3>{vehicle.name} <span>2026</span></h3><p>{vehicle.label}</p></div><span className="aqua-circle-arrow"><FiArrowUpRight /></span></div></Link>)}</div></div></section>
 
-      <section ref={sectionRefs.portfolio} className="min-h-[400px] bg-[#1a1a1a] py-16 px-4 sm:px-8">
-          <div className="w-full max-w-screen-xl mx-auto">
-            <div className="mb-12">
-              <h2 className="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-8">Our Sponsors</h2>
-              <p className="text-base sm:text-lg text-white max-w-2xl">
-                We are grateful to our sponsors for their invaluable support. Their contributions have played a vital role in advancing our projects, research, and outreach efforts.
-              </p>
-            </div>
+      <section className="aqua-section aqua-container"><div className="aqua-section-heading"><div><p className="aqua-eyebrow">Our expertise</p><h2>Different skills. One team.</h2></div><p className="aqua-section-aside">Every vehicle is the result of different skills<br />working toward the same horizon.</p></div><div className="aqua-discipline-grid">{disciplines.map((item) => <article className="aqua-discipline-card" key={item.title}><div className="aqua-card-topline"><item.icon /></div><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
 
-            <div className="mt-4">
-              <Link to="/sponsors" className="text-base sm:text-lg font-semibold text-white hover:text-blue-500 transition flex items-center group">
-                  Learn more about our partnership opportunities <span className="ml-2 group-hover:translate-x-1 transition-transform">&raquo;</span>
-              </Link>
-            </div>
+      <section className="aqua-section aqua-container aqua-journal"><div className="aqua-section-heading"><div><p className="aqua-eyebrow">What we do</p><h2>Competitions & outreach</h2></div></div><div className="aqua-journal-grid"><Link to="/competitions" className="aqua-journal-card"><div className="aqua-journal-image"><img src="/images/urpcteam2025.jpeg" alt="AquaCore team at URPC 2025" loading="lazy" /><span>COMPETITIONS</span></div><div className="aqua-journal-title"><h3>Putting our ideas to the test.</h3><FiArrowUpRight /></div><p>From URPC to RoboCup and beyond. Explore the challenges that drive our engineering.</p></Link><Link to="/outreach" className="aqua-journal-card"><div className="aqua-journal-image"><img src="/images/rovhandson_1.png" alt="Hands-on robotics workshop" loading="lazy" /><span>COMMUNITY & OUTREACH</span></div><div className="aqua-journal-title"><h3>Curiosity is better shared.</h3><FiArrowUpRight /></div><p>Workshops, conversations, and hands-on learning beyond the classroom.</p></Link></div></section>
 
-            <div className="mt-12">
-            {/* Sponsors Carousel */}
-            <SponsorsCarousel />
-            </div>
-
-          </div>
-      </section>
-    </div>
-
-  );
-}
-
-
-function SponsorsCarousel() {
-  const { ref: activityRef, isActive } = useElementActivity();
-  const sponsors = useMemo(() => [
-    //{ logo: "/images/logos/fstd_logo.webp", alt: "FSTD", logoClass: "max-h-16 max-w-44" },
-    { logo: "/images/logos/zanque.png", alt: "Zanque", logoClass: "max-h-16 max-w-44" },
-    { logo: "/images/logos/zanque.png", alt: "Zanque", logoClass: "max-h-16 max-w-44" },
-    { logo: "/images/logos/NEU.png", alt: "NEU", logoClass: "max-h-16 max-w-44" },
-    { logo: "/images/logos/zanque.png", alt: "Zanque", logoClass: "max-h-16 max-w-44" },
-    { logo: "/images/logos/cehai.webp", alt: "CEHAI", logoClass: "max-h-16 max-w-44" },
-    //{ logo: "/images/logos/zanque.png", alt: "Zanque", logoClass: "max-h-16 max-w-44" },
-    //{ logo: "/images/logos/zanque.png", alt: "Zanque", logoClass: "max-h-16 max-w-44" },
-    //{ logo: "/images/logos/zanque.png", alt: "Zanque", logoClass: "max-h-16 max-w-44" },
-    //{ logo: "/images/logos/smf.webp", alt: "Singapore Maritime Foundation", logoClass: "max-h-14 max-w-40" },
-    //{ logo: "/images/logos/jdf_logo.webp", alt: "James Dyson Foundation", logoClass: "max-h-14 max-w-36" },
-    //{ logo: "/images/logos/dso_logo.webp", alt: "DSO", logoClass: "max-h-14 max-w-36" },
-    //{ logo: "/images/logos/vectornav_logo.png", alt: "VectorNav", logoClass: "max-h-12 max-w-44" },
-    //{ logo: "/images/logos/waterlinked_logo.svg", alt: "WaterLinked", logoClass: "max-h-12 max-w-44" },
-    //{ logo: "/images/logos/espressif_logo.webp", alt: "Espressif", logoClass: "max-h-12 max-w-44" },
-    //{ logo: "/images/logos/zen4blue_logo.webp", alt: "Zen4Blue", logoClass: "max-h-14 max-w-40" },
-    //{ logo: "/images/logos/aquarian_logo.webp", alt: "Aquarian Audio", logoClass: "max-h-12 max-w-44" },
-    //{ logo: "/images/logos/dwe_logo.webp", alt: "DWE", logoClass: "max-h-9 max-w-36" },
-    //{ logo: "/images/logos/sonardyne_logo.webp", alt: "Sonardyne", logoClass: "max-h-12 max-w-44" },
-    //{ logo: "/images/logos/rovmaker_round.png", alt: "ROV Maker", logoClass: "max-h-20 max-w-32" },
-  ], []);
-
-  const trackRef = useRef(null);
-  const [width, setWidth] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const dragStartX = useRef(0);
-  const scrollStart = useRef(0);
-
-  // Measure width of one full set
-  useEffect(() => {
-    if (!trackRef.current) return;
-
-    const measure = () => {
-      const el = trackRef.current;
-      setWidth(el.scrollWidth / 2);
-    };
-
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, []);
-
-  // Drag support
-  const handlePointerDown = (e) => {
-    setIsDragging(true);
-    dragStartX.current = e.clientX;
-    scrollStart.current = 0;
-  };
-
-  const handlePointerMove = (e) => {
-    if (!isDragging || !trackRef.current) return;
-
-    const delta = e.clientX - dragStartX.current;
-    trackRef.current.scrollLeft = scrollStart.current - delta;
-  };
-
-  const handlePointerUp = () => {
-    setIsDragging(false);
-  };
-
-  const doubled = useMemo(() => [...sponsors, ...sponsors], [sponsors]);
-
-  return (
-    <div ref={activityRef} className="w-full overflow-hidden py-6">
-      <div
-        className="relative overflow-hidden"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#1a1a1a] to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#1a1a1a] to-transparent z-10" />
-
-        {/* Track */}
-        <div
-          ref={trackRef}
-          className={"flex gap-8 w-max will-change-transform animate-marquee"}
-          style={{
-            animationDuration: `${Math.max(width / 80, 20)}s`,
-            animationPlayState: isPaused || !isActive ? 'paused' : 'running',
-          }}
-        >
-          {doubled.map((s, i) => (
-            <div
-              key={`${s.alt}-${i}`}
-              className="min-w-[180px] sm:min-w-[220px] h-28 sm:h-32 bg-white/25 border-white/40 backdrop-blur-xl hover:bg-white/35 rounded-lg flex items-center justify-center p-5 backdrop-blur-md hover:scale-105 transition-transform duration-300"
-              onPointerDown={handlePointerDown}
-              onPointerMove={handlePointerMove}
-              onPointerUp={handlePointerUp}
-              onPointerLeave={handlePointerUp}
-            >
-              <div className="flex h-20 w-44 items-center justify-center">
-                <img
-                  src={s.logo}
-                  alt={s.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className={`${s.logoClass} h-auto w-auto object-contain transition duration-300 mx-auto`}
-                  draggable={false}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <section className="aqua-container aqua-join-banner"><div><p className="aqua-eyebrow">Join AquaCore</p><h2>Build with us.</h2><p>Bring your curiosity. Let's build something that goes further.</p></div><Link to="/joinus" className="aqua-button">Join the team <FiArrowUpRight /></Link></section>
     </div>
   );
 }

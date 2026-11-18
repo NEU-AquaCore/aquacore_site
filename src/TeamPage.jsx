@@ -1,3 +1,4 @@
+import PageHeader from './components/PageHeader';
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import teamData from './data/teamData.js';
@@ -10,23 +11,13 @@ export default function TeamPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#181818] text-white flex flex-col items-center justify-start overflow-x-hidden">
+    <div className="aqua-legacy-page aqua-team-page min-h-screen bg-[#181818] text-white flex flex-col items-center justify-start overflow-x-hidden">
       {/* Background Image Section */}
 
       
       {/* Hero Section with Background Image */}
-      <div className="hero-container w-full h-80 relative flex items-center justify-center mb-12 mt-16">
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-        <div className="relative z-20 max-w-6xl px-4 flex flex-col md:flex-row items-start justify-center gap-8">
-          <div className="flex-shrink-0">
-            <h1 className="text-3xl md:text-5xl font-bold text-blue-500 text-center md:text-left">Meet Our Team</h1>
-          </div>
-          <div className="flex-1">
-            <p className="text-base md:text-lg text-white text-justify">Our team brings together expertise across multiple disciplines — including mechanical design, electronics, control systems, and software engineering. This diverse skill set allows us to tackle every aspect of underwater robotics development in-house, from hull design to vision algorithms. We believe that good robots are built at the intersection of different minds, and we work closely across fields to turn ideas into working systems.</p>
-          </div>
-        </div>
-      </div>
-      
+      <PageHeader eyebrow="AquaCore NEU" title="Meet Our Team" description="Mechanical design, electronics, control systems, and software. We bring different skills together to turn ideas into working underwater vehicles." image="/images/team-2.jpg" />
+
       <div className="w-full max-w-6xl px-4">
         {/* Year Tabs - Mobile: Stack vertically, Desktop: Side by side */}
         <div className="flex flex-col md:flex-row justify-start items-start gap-4 md:gap-8">
@@ -91,7 +82,7 @@ export default function TeamPage() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .hero-container {
           background-color:rgb(98, 96, 96);
         }

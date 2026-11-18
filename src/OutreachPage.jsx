@@ -1,3 +1,4 @@
+import PageHeader from './components/PageHeader';
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useElementActivity } from './hooks/useElementActivity';
@@ -13,20 +14,9 @@ export default function OutreachPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#181818] text-white flex flex-col items-center pt-8 sm:pt-0">
+    <div className="aqua-legacy-page min-h-screen bg-[#181818] text-white flex flex-col items-center ">
       {/* Outreach Hero Banner */}
-      <section
-        className="relative w-full min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-8 py-24 bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('/images/outreach_banner.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60 z-0" />
-        <div className="relative z-10">
-          <h1 className="text-5xl sm:text-6xl font-bold text-blue-500 mb-8">Outreach</h1>
-          <p className="max-w-4xl text-lg sm:text-xl leading-relaxed">
-            We are eager to share our work and knowledge with the community through outreach activities, aiming to inspire a spirit of innovation in students. Through these experiences, we hope to spark curiosity about marine science and technology — encouraging young learners to explore beyond the classroom and develop their own creative solutions.
-          </p>
-        </div>
-      </section>
+      <PageHeader eyebrow="AquaCore NEU" title="Outreach" description={"Hands-on learning, shared knowledge, and a community inspired by marine science and technology."} image={"/images/outreach_banner.jpg"} />
 
       {/* Workshops Section */}
       <section className="w-full bg-[#1a1a1a] py-16">

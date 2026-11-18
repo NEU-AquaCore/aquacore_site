@@ -8,7 +8,7 @@ The official website for **AquaCore (海洋之心)**, a student-led underwater r
 
 ## 🚀 Live Demo
 
-Visit our website: [https://site.neu-aquacore.workers.dev](https://site.neu-aquacore.workers.dev)
+Production domain: [https://aquacore.org.cn](https://aquacore.org.cn). Self-hosted deployment instructions: [deploy/README.md](deploy/README.md).
 
 ---
 
@@ -32,7 +32,7 @@ Visit our website: [https://site.neu-aquacore.workers.dev](https://site.neu-aqua
 | **Animation** | GSAP + ScrollTrigger, @react-spring/three |
 | **Styling** | TailwindCSS |
 | **Routing** | React Router v7 |
-| **Deployment** | Cloudflare Pages |
+| **Deployment** | Debian + Nginx + Let's Encrypt |
 
 ---
 
@@ -90,6 +90,6 @@ This project is developed by the AquaCore team at Northeastern University.
 
 AquaCore is a student team from Northeastern University, founded in 2020. We bring together skills in mechanics, electronics, programming, and systems engineering to build underwater robots.
 
-**Website**: [https://site.neu-aquacore.workers.dev](https://site.neu-aquacore.workers.dev)
+**Website**: [https://aquacore.org.cn](https://aquacore.org.cn)
 
 **GitHub**: [https://github.com/NEU-AquaCore](https://github.com/NEU-AquaCore)

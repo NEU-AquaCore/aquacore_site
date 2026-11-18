@@ -1,3 +1,4 @@
+import PageHeader from './components/PageHeader';
 import React, { useRef, useState, useEffect } from 'react';
 import { FaEnvelope, FaMapPin } from 'react-icons/fa';
 import ContactForm from './ContactForm';
@@ -23,20 +24,9 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#181818] text-white flex flex-col items-center">
+    <div className="aqua-legacy-page min-h-screen bg-[#181818] text-white flex flex-col items-center">
       {/* Contact Hero Banner */}
-      <section
-        className="relative w-full min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-8 py-24 bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('/images/team-2x.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60 z-0" />
-        <div className="relative z-10">
-          <h1 className="text-5xl sm:text-6xl font-bold text-blue-500 mb-8">Contact Us</h1>
-          <p className="max-w-4xl text-lg sm:text-xl leading-relaxed">
-            If you would like more information about our projects, the research and development activities of AquaCore, or have any other questions, please feel free to drop us a message.
-          </p>
-        </div>
-      </section>
+      <PageHeader eyebrow="AquaCore NEU" title="Contact Us" description={"Projects, partnerships, or a simple hello. We'd love to hear from you."} image={"/images/team-2x.jpg"} />
 
       {/* Image Section */}
       <section ref={sectionRefs.services}

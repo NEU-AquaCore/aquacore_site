@@ -1,22 +1,12 @@
-import Navbar from './Navbar';
+import PageHeader from './components/PageHeader';
 import { VehicleDescription } from './components/VehicleDescription';
 
 export default function VehiclesPage() {
   return (
-    <div className="min-h-screen bg-[#181818] text-white w-full overflow-x-hidden">
-      <Navbar />
+    <div className="aqua-legacy-page min-h-screen bg-[#181818] text-white w-full overflow-x-hidden">
 
       {/* Hero Header */}
-      <section
-        className="relative w-full min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-8 py-24 bg-cover bg-center text-white"
-        //style={{ backgroundImage: "url('/images/bot_1.jpeg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60 z-0" />
-        <div className="relative z-10">
-          <h1 className="text-5xl font-bold text-blue-500 mb-8 text-center">Our Vehicles</h1>
-          <p className="text-lg text-center mb-16">Explore our innovative underwater vehicles!</p>
-        </div>
-      </section>
+      <PageHeader eyebrow="AquaCore NEU" title="Our Vehicles" description={"Explore the autonomous underwater vehicles we design, build, and refine — one engineering challenge at a time."} />
 
       {/* Vehicles Content Container */}
       <div className="w-full">

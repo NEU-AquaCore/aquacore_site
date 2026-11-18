@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy:server": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/deploy-server.ps1",
     "optimize:models": "node scripts/optimize-models.mjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

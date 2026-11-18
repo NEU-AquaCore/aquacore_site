@@ -17,7 +17,7 @@ export function VehicleDescription({
   const { ref, hasEntered, isActive } = useElementActivity();
   return (
     <section
-      className={`w-full py-4 sm:py-6 transition-colors duration-300 ${
+      className={`aqua-vehicle-section w-full py-4 sm:py-6 transition-colors duration-300 ${
         highlightBg ? 'bg-[#222]' : 'bg-transparent'
       }`}
     >
@@ -60,8 +60,8 @@ export function VehicleDescription({
       </div>
 
       {/* 3D Viewer Block */}
-      <div className="flex-1 flex items-center justify-center">
-        <div ref={ref} className="w-[24rem] h-[24rem] md:w-[32rem] md:h-[32rem] lg:w-[40rem] lg:h-[40rem] flex items-center justify-center overflow-hidden relative backdrop-blur-sm border border-zinc-800/50">
+      <div className="aqua-model-column flex-1 flex items-center justify-center">
+        <div ref={ref} className="aqua-model-frame w-[24rem] h-[24rem] md:w-[32rem] md:h-[32rem] lg:w-[40rem] lg:h-[40rem] flex items-center justify-center overflow-hidden relative backdrop-blur-sm border border-zinc-800/50">
           {hasEntered && <Suspense fallback={null}><Optimized3DViewer
             active={isActive}
             showModel={true}

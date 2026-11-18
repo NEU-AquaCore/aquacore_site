@@ -1,3 +1,4 @@
+import PageHeader from './components/PageHeader';
 import { Link } from "react-router-dom";
 
 export default function ResearchPage() {
@@ -25,19 +26,9 @@ export default function ResearchPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#181818] text-white">
+    <div className="aqua-legacy-page min-h-screen bg-[#181818] text-white">
       {/* Header */}
-      <section className="relative w-full min-h-[60vh] flex flex-col justify-center items-center text-center px-4 sm:px-8 py-24 bg-black">
-        <div className="relative z-10">
-          <h1 className="text-5xl sm:text-6xl font-bold text-blue-500 mb-8">
-            Research
-          </h1>
-          <p className="max-w-3xl text-lg sm:text-xl leading-relaxed text-white">
-            Learn more about our ongoing and completed research projects that
-            push the boundaries of robotics and automation.
-          </p>
-        </div>
-      </section>
+      <PageHeader eyebrow="AquaCore NEU" title="Research" description={"Discover our ongoing and upcoming research in underwater robotics and automation."} />
 
       {/* Research Cards */}
       <div className="max-w-6xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-2">

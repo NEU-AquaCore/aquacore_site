@@ -1,3 +1,4 @@
+import PageHeader from './components/PageHeader';
 import { Link } from 'react-router-dom';
 
 export default function CompetitionsPage() {
@@ -77,20 +78,9 @@ export default function CompetitionsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#181818] text-white">
+    <div className="aqua-legacy-page min-h-screen bg-[#181818] text-white">
       {/* Header */}
-      <section
-        className="relative w-full min-h-[70vh] flex flex-col justify-center items-center text-center px-4 sm:px-8 py-24 bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('/images/awards.png')" }}
-      >
-        <div className="absolute inset-0 bg-black/60 z-0" />
-        <div className="relative z-10">
-          <h1 className="text-5xl sm:text-6xl font-bold text-blue-500 mb-8">Competitions</h1>
-          <p className="max-w-4xl text-lg sm:text-xl leading-relaxed">
-            Here's a glimpse of our journey through various competitions, showcasing our dedication, innovation, and achievements in the field of underwater robotics. We are proud of our accomplishments and excited for the future challenges ahead!
-          </p>
-        </div>
-      </section>
+      <PageHeader eyebrow="AquaCore NEU" title="Competitions" description={"A glimpse of our journey through underwater robotics competitions. Each challenge is a chance to test our ideas, learn together, and build better."} image={"/images/awards.png"} />
 
       <div className="flex w-full justify-center">
         <p className="text-gray-300 text-lg sm:text-xl pt-10 pb-10">
