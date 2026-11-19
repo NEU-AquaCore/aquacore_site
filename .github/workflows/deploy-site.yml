@@ -43,6 +43,13 @@ jobs:
         run: |
           node --input-type=module -e 'import { writeFileSync } from "node:fs"; writeFileSync("dist/_deployment.json", JSON.stringify({ commit: process.env.GITHUB_SHA, repository: process.env.GITHUB_REPOSITORY, builtAt: new Date().toISOString() }) + "\n");'
 
+      - name: Prepare an incremental release
+        run: |
+          if ! curl --connect-timeout 15 --max-time 30 -fsS https://aquacore.org.cn/_asset-manifest.json -o "$RUNNER_TEMP/aquacore-previous-manifest.json"; then
+            printf '{"version":1,"files":{}}\n' > "$RUNNER_TEMP/aquacore-previous-manifest.json"
+          fi
+          python3 deploy/prepare_release.py package dist "$RUNNER_TEMP/aquacore-previous-manifest.json" "$RUNNER_TEMP/aquacore-site.tar.gz"
+
       - name: Publish the verified release
         env:
           DEPLOY_HOST: ${{ secrets.AQUACORE_DEPLOY_HOST }}
@@ -60,7 +67,6 @@ jobs:
           printf '%s\n' "$DEPLOY_SSH_KEY" | tr -d '\r' > "$key_file"
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$hosts_file"
           ssh-keygen -y -f "$key_file" > /dev/null
-          tar -czf "$RUNNER_TEMP/aquacore-site.tar.gz" -C dist .
           digest="$(sha256sum "$RUNNER_TEMP/aquacore-site.tar.gz" | cut -d ' ' -f 1)"
           ssh -i "$key_file" -p "$DEPLOY_PORT" \
             -o BatchMode=yes -o StrictHostKeyChecking=yes \

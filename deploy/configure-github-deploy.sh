@@ -13,6 +13,7 @@ install -d -m 755 /usr/local/libexec/aquacore
 install -m 755 "$source_dir/github-receive-release.sh" /usr/local/libexec/aquacore/github-receive-release.sh
 install -m 755 "$source_dir/activate-release.sh" /usr/local/libexec/aquacore/activate-release.sh
 install -m 644 "$source_dir/validate_archive.py" /usr/local/libexec/aquacore/validate_archive.py
+install -m 644 "$source_dir/prepare_release.py" /usr/local/libexec/aquacore/prepare_release.py
 install -m 755 "$source_dir/github-activate-release.sh" /usr/local/sbin/aquacore-activate-release
 
 install -d -m 755 -o aquacore-deploy -g aquacore-deploy /var/www/aquacore/releases

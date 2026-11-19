@@ -21,7 +21,7 @@ printf '%s  %s\n' "$digest" "$stage/site.tar.gz" | sha256sum -c -
 release_id="$(date -u +%Y%m%dT%H%M%SZ)-${commit:0:12}"
 release="/var/www/aquacore/releases/$release_id"
 mkdir "$release"
-python3 /usr/local/libexec/aquacore/validate_archive.py "$stage/site.tar.gz" "$release"
+python3 /usr/local/libexec/aquacore/validate_archive.py "$stage/site.tar.gz" "$release" /var/www/aquacore/current
 python3 - "$release/_deployment.json" "$commit" <<'PY'
 import json
 import sys

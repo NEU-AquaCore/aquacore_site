@@ -44,7 +44,9 @@
 
 生产发布源是 `NEU-AquaCore/aquacore_site` 的 `main` 分支。每次推送后，GitHub Actions 自动安装锁定依赖、验证部署包处理、构建网站并发布到现有服务器；也可以在 Actions 中手动运行 **Deploy AquaCore website**。
 
-工作流：`.github/workflows/deploy-site.yml`。发布使用专用 `aquacore-deploy` SSH 账户，密钥只能执行静态网站上传，不能打开服务器 shell；服务器收到完整部署包后校验 SHA-256、路径和版本信息，再原子切换站点。自检失败自动恢复旧版本。现有 HTTPS 和域名配置继续使用。
+工作流：`.github/workflows/deploy-site.yml`。发布使用专用 `aquacore-deploy` SSH 账户，密钥只能执行静态网站上传，不能打开服务器 shell；服务器收到部署数据后校验 SHA-256、路径和版本信息，再原子切换站点。自检失败自动恢复旧版本。现有 HTTPS 和域名配置继续使用。
+
+发布采用增量传输：构建时比较线上 `_asset-manifest.json` 中的 SHA-256，只上传发生变化的文件。服务器为新版本复制未变化的资源，再按完整清单校验每个文件；因此原有大型模型和视频不需要重复上传。上线清单不包含删除的普通文件，旧版本的哈希资源仍保留供已打开的页面使用。
 
 仓库需要以下 Actions Secrets：
 
