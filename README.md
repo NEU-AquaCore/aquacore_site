@@ -10,6 +10,8 @@ The official website for **AquaCore (海洋之心)**, a student-led underwater r
 
 Production domain: [https://aquacore.org.cn](https://aquacore.org.cn). Self-hosted deployment instructions: [deploy/README.md](deploy/README.md).
 
+Pushes to `NEU-AquaCore/aquacore_site`'s `main` branch automatically build and update the production website through GitHub Actions. The deployed revision is available at [deployment status](https://aquacore.org.cn/_deployment.json).
+
 ---
 
 ## ✨ Features

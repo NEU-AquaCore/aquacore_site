@@ -40,6 +40,28 @@
 
 ## 更新与回滚
 
+### GitHub 自动同步
+
+生产发布源是 `NEU-AquaCore/aquacore_site` 的 `main` 分支。每次推送后，GitHub Actions 自动安装锁定依赖、验证部署包处理、构建网站并发布到现有服务器；也可以在 Actions 中手动运行 **Deploy AquaCore website**。
+
+工作流：`.github/workflows/deploy-site.yml`。发布使用专用 `aquacore-deploy` SSH 账户，密钥只能执行静态网站上传，不能打开服务器 shell；服务器收到完整部署包后校验 SHA-256、路径和版本信息，再原子切换站点。自检失败自动恢复旧版本。现有 HTTPS 和域名配置继续使用。
+
+仓库需要以下 Actions Secrets：
+
+| Secret | 内容 |
+| --- | --- |
+| `AQUACORE_DEPLOY_HOST` | 网站服务器 IP 或 SSH 主机名 |
+| `AQUACORE_DEPLOY_USER` | `aquacore-deploy` |
+| `AQUACORE_DEPLOY_PORT` | SSH 端口 |
+| `AQUACORE_DEPLOY_SSH_KEY` | 专用部署私钥，不提交到 Git |
+| `AQUACORE_DEPLOY_KNOWN_HOSTS` | 事先核实过的服务器 SSH 主机公钥 |
+
+管理员首次在服务器执行 `bash deploy/configure-github-deploy.sh /path/to/deploy-key.pub` 安装受限账户与发布脚本。服务器端的管理员脚本不随普通页面推送自动替换；修改这些脚本时由管理员重新安装。
+
+上线后 `https://aquacore.org.cn/_deployment.json` 给出当前 GitHub commit，Actions 会核对它与本次推送一致。GitHub 的部署日志可查看构建、上传和公开站点验证结果。
+
+### 本地手动发布
+
 后续更新仍执行 `npm run deploy:server -- -Server YOUR_SERVER_IP`。脚本保留已有 HTTPS 配置，并为仍打开旧页面的访客保留旧哈希资源。
 页面和未带版本号的模型、游戏资源每次重新验证缓存；Vite 哈希资源长期缓存。React 路由可直接打开或刷新，缺失静态资源返回 404。
 

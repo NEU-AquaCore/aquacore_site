@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Link } from 'react-router-dom';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Scene from "./scene";
@@ -267,7 +266,7 @@ function ChallengePage() {
   }, []);
 
   return (
-    <main ref={mainRef} className="overflow-x-hidden bg-[#232323] min-h-screen">
+    <main ref={mainRef} className="aqua-vehicle-detail overflow-x-hidden bg-[#232323] min-h-screen">
       {/* Clickable down arrow indicator for tab */}
       <div 
         className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 pointer-events-auto cursor-pointer"
@@ -405,7 +404,7 @@ function ChallengePage() {
                 Vehicle Specifications
               </h2>
               <p className="mx-auto max-w-3xl text-sm sm:text-base md:text-lg text-gray-300">
-                Hydra's hardware and autonomy stack are organized around reliability, modularity, and competition-ready underwater performance.
+                Hydra’s hardware and autonomy stack are organized around reliability, modularity, and competition-ready underwater performance.
               </p>
             </div>
 

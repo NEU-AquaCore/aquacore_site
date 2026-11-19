@@ -566,6 +566,7 @@ function TeamMemberCard({ member }) {
   const { name, role, image, backImage, schoolYear, github, linkedin, email, department, company } = member;
   const [isFlipped, setIsFlipped] = useState(false);
   const [imgError, setImgError] = useState(false);
+  const [backImgError, setBackImgError] = useState(false);
   
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);
@@ -582,16 +583,12 @@ function TeamMemberCard({ member }) {
         {/* Front of card */}
         <div className="team-card-front ">
           <div className="w-full h-64 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-600">
-            <img loading="lazy" decoding="async"
-              src={imgError ? '/api/placeholder/192/192' : image}
+            {!imgError && image ? <img loading="lazy" decoding="async"
+              src={image}
               alt={name} 
               className="w-full h-full object-cover"
               onError={() => setImgError(true)}
-              onLoad={() => setImgError(false)}
-            />
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm" style={{ display: 'none' }}>
-              Photo
-            </div>
+            /> : <div className="aqua-member-placeholder"><span aria-hidden="true">{name.split(' ').map(part => part[0]).join('').slice(0, 2)}</span><p>Photo coming soon</p></div>}
           </div>
           <h4 className="text-lg font-bold text-white mb-2">{name}</h4>
           <p className="text-blue-400 font-semibold mb-2">{role}</p>
@@ -604,18 +601,12 @@ function TeamMemberCard({ member }) {
         {/* Back of card */}
         <div className="team-card-back">
           <div className="w-full h-64 mx-auto mb-4 rounded-lg overflow-hidden bg-gray-600">
-            <img loading="lazy" decoding="async"
+            {!backImgError && (backImage || image) ? <img loading="lazy" decoding="async"
               src={backImage || image} 
               alt={`${name} back`} 
               className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'flex';
-              }}
-            />
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm" style={{ display: 'none' }}>
-              Photo
-            </div>
+              onError={() => setBackImgError(true)}
+            /> : <div className="aqua-member-placeholder"><span aria-hidden="true">{name.split(' ').map(part => part[0]).join('').slice(0, 2)}</span><p>Photo coming soon</p></div>}
           </div>
           <h4 className="text-lg font-bold text-white mb-2">{name}</h4>
           <h5 className="text-sm text-blue-400 font-semibold mb-2">{schoolYear || role}</h5>
@@ -660,7 +651,7 @@ function TeamMemberCard({ member }) {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         .team-card-container {
           perspective: 1000px;
           cursor: pointer;

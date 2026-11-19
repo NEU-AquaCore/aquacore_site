@@ -4,25 +4,20 @@ import './index.css'
 import App from './App.jsx'
 import Home from './Home.jsx'
 import { ToastContainer } from 'react-toastify';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Navigate } from 'react-router-dom';
 
 const ClutchPage = lazy(() => import('./ClutchPage.jsx'));
 const ChallengePage = lazy(() => import('./ChallengePage.jsx'));
 const TeamPage = lazy(() => import('./TeamPage.jsx'));
 const VehiclesPage = lazy(() => import('./VehiclesPage.jsx'));
 const CompetitionsPage = lazy(() => import('./CompetitionsPage.jsx'));
-const ResearchPage = lazy(() => import('./ResearchPage.jsx'));
 const OutreachPage = lazy(() => import('./OutreachPage.jsx'));
 const SponsorsPage = lazy(() => import('./SponsorsPage.jsx'));
 const ContactPage = lazy(() => import('./ContactPage.jsx'));
 const JoinUsPage = lazy(() => import('./JoinUsPage.jsx'));
 const GamePage = lazy(() => import('./GamePage.jsx'));
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <ToastContainer />
-    <BrowserRouter>
-      <Routes>
+const router = createBrowserRouter(createRoutesFromElements(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           {/* <Route path="kevin" element={<KevinPage />} /> */}
@@ -33,7 +28,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="team" element={<TeamPage />} />
           <Route path="vehicles" element={<VehiclesPage />} />
           <Route path="competitions" element={<CompetitionsPage />} />
-          <Route path="research" element={<ResearchPage />} />
+          <Route path="research" element={<Navigate to="/" replace />} />
           <Route path="outreach" element={<OutreachPage />} />
           <Route path="sponsors" element={<SponsorsPage />} />
           <Route path="contact" element={<ContactPage />} />
@@ -62,7 +57,11 @@ createRoot(document.getElementById('root')).render(
           {/* <Route path="blog" element={<TeamBlogPage />} />
           <Route path="blog/:slug" element={<TeamBlogPostPage />} /> */}
         </Route>
-      </Routes>
-    </BrowserRouter>
+));
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <ToastContainer />
+    <RouterProvider router={router} />
   </StrictMode>,
 )

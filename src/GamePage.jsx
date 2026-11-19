@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function GamePage() {
   const [gameScale, setGameScale] = useState(0.65);
@@ -7,6 +7,7 @@ export default function GamePage() {
   const [isPortrait, setIsPortrait] = useState(false);
   const [gameLoadError, setGameLoadError] = useState(false);
   const [gameLoaded, setGameLoaded] = useState(false);
+  const gameSurface = useRef(null);
 
   // Force landscape orientation on mobile
   useEffect(() => {
@@ -43,28 +44,12 @@ export default function GamePage() {
       setIsMobile(isMobileDevice);
       setIsPortrait(isPortraitMode);
 
-      if (isMobileDevice) {
-        // Force horizontal mode on mobile - ensure game fits within screen bounds
-        const maxHeight = Math.min(height * 0.7, 350); // 70% of screen height, max 350px
-        const maxWidth = Math.min(width * 0.9, 600); // 90% of screen width, max 600px
-        
-        // Calculate scale based on the more restrictive dimension
-        const scaleByHeight = maxHeight / 953;
-        const scaleByWidth = maxWidth / 1694;
-        const mobileScale = Math.min(scaleByHeight, scaleByWidth);
-        
-        const mobileHeight = 953 * mobileScale;
-        const mobileWidth = 1694 * mobileScale;
-        
-        setGameScale(mobileScale);
-        setContainerSize({ width: mobileWidth, height: mobileHeight });
-      } else if (width < 1024) { // Tablet
-        setGameScale(0.45);
-        setContainerSize({ width: 762, height: 429 });
-      } else { // Desktop
-        setGameScale(0.65);
-        setContainerSize({ width: 1101, height: 619 });
-      }
+      const availableWidth = Math.max(1, (gameSurface.current?.clientWidth ?? width) - 16);
+      const maxWidth = Math.min(availableWidth, isMobileDevice ? 600 : 1101);
+      const maxHeight = Math.min(height * 0.7, isMobileDevice ? 350 : 619);
+      const scale = Math.min(maxWidth / 1694, maxHeight / 953);
+      setGameScale(scale);
+      setContainerSize({ width: 1694 * scale, height: 953 * scale });
     };
 
     updateGameSize();
@@ -78,27 +63,17 @@ export default function GamePage() {
       updateGameSize();
     });
     
-    // Observe the document body for size changes
-    resizeObserver.observe(document.body);
-    
-    // Also update on scroll and other events for better responsiveness
-    const handleScroll = () => updateGameSize();
-    window.addEventListener('scroll', handleScroll);
-    
-    // Update more frequently for smoother scaling
-    const interval = setInterval(updateGameSize, 100);
+    if (gameSurface.current) resizeObserver.observe(gameSurface.current);
     
     return () => {
       window.removeEventListener('resize', updateGameSize);
       window.removeEventListener('orientationchange', updateGameSize);
-      window.removeEventListener('scroll', handleScroll);
       resizeObserver.disconnect();
-      clearInterval(interval);
     };
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#181818]">
+    <div className="aqua-legacy-page min-h-screen bg-[#181818]">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-8 md:px-20">
@@ -122,7 +97,7 @@ export default function GamePage() {
             </p>
             
             {/* GameMaker HTML5 Game - responsive container */}
-            <div className={`bg-black rounded-lg relative flex items-center justify-center p-2 ${
+            <div ref={gameSurface} className={`aqua-game-surface bg-black rounded-lg relative flex items-center justify-center p-2 ${
               isMobile ? 'min-h-[300px]' : ''
             }`}>
               {/* Mobile Portrait Mode Warning */}
@@ -271,4 +246,4 @@ export default function GamePage() {
       </section>
     </div>
   );
-} 
+}
